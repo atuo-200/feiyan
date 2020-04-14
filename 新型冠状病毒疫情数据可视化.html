@@ -1,0 +1,6607 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/maps/china.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/themes/roma.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/maps/world.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts-wordcloud.min.js"></script>
+
+    
+</head>
+<body>
+        <style>
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .chart-container {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+        }
+    </style>
+    <div class="tab">
+            <button class="tablinks" onclick="showChart(event, '6671c524460246308949d6f92775b877')">中国疫情数据地图</button>
+            <button class="tablinks" onclick="showChart(event, '20de57e942844a26a1c6f82325e09ce6')">中国每日疫情数据折线图</button>
+            <button class="tablinks" onclick="showChart(event, 'ed1ff094663c46899bfc816091fd57ab')">国内城市死亡/治愈人数饼图</button>
+            <button class="tablinks" onclick="showChart(event, '0b0bdc0680c44bfb8ad35705192ea164')">海外疫情数据条形图</button>
+            <button class="tablinks" onclick="showChart(event, 'bed1adba18d5450a843e5e518b34297b')">海外疫情数据地图</button>
+            <button class="tablinks" onclick="showChart(event, '9e1f1ff0febb4e28835047efb3abfe44')">海外疫情国家词云图</button>
+    </div>
+
+    <div class="box">
+                <div id="6671c524460246308949d6f92775b877" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_6671c524460246308949d6f92775b877 = echarts.init(
+            document.getElementById('6671c524460246308949d6f92775b877'), 'roma', {renderer: 'canvas'});
+        var option_6671c524460246308949d6f92775b877 = {
+    "backgroundColor": "#eee",
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "series": [
+        {
+            "type": "map",
+            "name": "\u786e\u8bca\u75c5\u4f8b",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "mapType": "china",
+            "data": [
+                {
+                    "name": "\u4e0a\u6d77",
+                    "value": 618
+                },
+                {
+                    "name": "\u4e91\u5357",
+                    "value": 184
+                },
+                {
+                    "name": "\u5185\u8499\u53e4",
+                    "value": 190
+                },
+                {
+                    "name": "\u5317\u4eac",
+                    "value": 589
+                },
+                {
+                    "name": "\u53f0\u6e7e",
+                    "value": 393
+                },
+                {
+                    "name": "\u5409\u6797",
+                    "value": 100
+                },
+                {
+                    "name": "\u56db\u5ddd",
+                    "value": 560
+                },
+                {
+                    "name": "\u5929\u6d25",
+                    "value": 185
+                },
+                {
+                    "name": "\u5b81\u590f",
+                    "value": 75
+                },
+                {
+                    "name": "\u5b89\u5fbd",
+                    "value": 991
+                },
+                {
+                    "name": "\u5c71\u4e1c",
+                    "value": 784
+                },
+                {
+                    "name": "\u5c71\u897f",
+                    "value": 173
+                },
+                {
+                    "name": "\u5e7f\u4e1c",
+                    "value": 1564
+                },
+                {
+                    "name": "\u5e7f\u897f",
+                    "value": 254
+                },
+                {
+                    "name": "\u65b0\u7586",
+                    "value": 76
+                },
+                {
+                    "name": "\u6c5f\u82cf",
+                    "value": 653
+                },
+                {
+                    "name": "\u6c5f\u897f",
+                    "value": 937
+                },
+                {
+                    "name": "\u6cb3\u5317",
+                    "value": 327
+                },
+                {
+                    "name": "\u6cb3\u5357",
+                    "value": 1276
+                },
+                {
+                    "name": "\u6d59\u6c5f",
+                    "value": 1267
+                },
+                {
+                    "name": "\u6d77\u5357",
+                    "value": 168
+                },
+                {
+                    "name": "\u6e56\u5317",
+                    "value": 67803
+                },
+                {
+                    "name": "\u6e56\u5357",
+                    "value": 1019
+                },
+                {
+                    "name": "\u6fb3\u95e8",
+                    "value": 45
+                },
+                {
+                    "name": "\u7518\u8083",
+                    "value": 139
+                },
+                {
+                    "name": "\u798f\u5efa",
+                    "value": 353
+                },
+                {
+                    "name": "\u897f\u85cf",
+                    "value": 1
+                },
+                {
+                    "name": "\u8d35\u5dde",
+                    "value": 147
+                },
+                {
+                    "name": "\u8fbd\u5b81",
+                    "value": 145
+                },
+                {
+                    "name": "\u91cd\u5e86",
+                    "value": 579
+                },
+                {
+                    "name": "\u9655\u897f",
+                    "value": 256
+                },
+                {
+                    "name": "\u9752\u6d77",
+                    "value": 18
+                },
+                {
+                    "name": "\u9999\u6e2f",
+                    "value": 1012
+                },
+                {
+                    "name": "\u9ed1\u9f99\u6c5f",
+                    "value": 819
+                }
+            ],
+            "roam": true,
+            "zoom": 1,
+            "showLegendSymbol": false,
+            "emphasis": {},
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            },
+            "textStyle_opts": {
+                "fontSize": 12
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u786e\u8bca\u75c5\u4f8b"
+            ],
+            "selected": {
+                "\u786e\u8bca\u75c5\u4f8b": true
+            },
+            "show": false,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "title": [
+        {
+            "text": "\u5168\u56fd\u5404\u7701\u786e\u8bca\u6848\u4f8b",
+            "left": "center",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "piecewise",
+        "min": 0,
+        "max": 100,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "orient": "vertical",
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 14,
+        "borderWidth": 0,
+        "pieces": [
+            {
+                "min": 10000,
+                "label": ">=10000\u4eba",
+                "color": "#BC8F8F"
+            },
+            {
+                "min": 1000,
+                "max": 9999,
+                "label": "1000-9999\u4eba",
+                "color": "#FFDEAD"
+            },
+            {
+                "min": 500,
+                "max": 999,
+                "label": "500-999\u4eba",
+                "color": "#FFA500"
+            },
+            {
+                "min": 100,
+                "max": 499,
+                "label": "100-499\u4eba",
+                "color": "#B22222"
+            },
+            {
+                "min": 10,
+                "max": 99,
+                "label": "10-99\u4eba",
+                "color": "#D2691E"
+            },
+            {
+                "min": 1,
+                "max": 9,
+                "label": "1-9\u4eba",
+                "color": "#E9967A"
+            }
+        ]
+    }
+};
+        chart_6671c524460246308949d6f92775b877.setOption(option_6671c524460246308949d6f92775b877);
+    </script>
+                <div id="20de57e942844a26a1c6f82325e09ce6" class="chart-container" style="width:1000px; height:500px;"></div>
+    <script>
+        var chart_20de57e942844a26a1c6f82325e09ce6 = echarts.init(
+            document.getElementById('20de57e942844a26a1c6f82325e09ce6'), 'white', {renderer: 'canvas'});
+        var option_20de57e942844a26a1c6f82325e09ce6 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "line",
+            "name": "\u73b0\u786e\u8bca",
+            "connectNulls": false,
+            "yAxisIndex": 0,
+            "symbolSize": 3,
+            "showSymbol": true,
+            "smooth": false,
+            "step": false,
+            "data": [
+                [
+                    "1.13",
+                    1.13
+                ],
+                [
+                    "1.14",
+                    1.14
+                ],
+                [
+                    "1.15",
+                    1.15
+                ],
+                [
+                    "1.16",
+                    1.16
+                ],
+                [
+                    "1.17",
+                    1.17
+                ],
+                [
+                    "1.18",
+                    1.18
+                ],
+                [
+                    "1.19",
+                    1.19
+                ],
+                [
+                    "1.2",
+                    1.2
+                ],
+                [
+                    "1.21",
+                    1.21
+                ],
+                [
+                    "1.22",
+                    1.22
+                ],
+                [
+                    "1.23",
+                    1.23
+                ],
+                [
+                    "1.24",
+                    1.24
+                ],
+                [
+                    "1.25",
+                    1.25
+                ],
+                [
+                    "1.26",
+                    1.26
+                ],
+                [
+                    "1.27",
+                    1.27
+                ],
+                [
+                    "1.28",
+                    1.28
+                ],
+                [
+                    "1.29",
+                    1.29
+                ],
+                [
+                    "1.3",
+                    1.3
+                ],
+                [
+                    "1.31",
+                    1.31
+                ],
+                [
+                    "2.01",
+                    2.01
+                ],
+                [
+                    "2.02",
+                    2.02
+                ],
+                [
+                    "2.03",
+                    2.03
+                ],
+                [
+                    "2.04",
+                    2.04
+                ],
+                [
+                    "2.05",
+                    2.05
+                ],
+                [
+                    "2.06",
+                    2.06
+                ],
+                [
+                    "2.07",
+                    2.07
+                ],
+                [
+                    "2.08",
+                    2.08
+                ],
+                [
+                    "2.09",
+                    2.09
+                ],
+                [
+                    "2.1",
+                    2.1
+                ],
+                [
+                    "2.11",
+                    2.11
+                ],
+                [
+                    "2.12",
+                    2.12
+                ],
+                [
+                    "2.13",
+                    2.13
+                ],
+                [
+                    "2.14",
+                    2.14
+                ],
+                [
+                    "2.15",
+                    2.15
+                ],
+                [
+                    "2.16",
+                    2.16
+                ],
+                [
+                    "2.17",
+                    2.17
+                ],
+                [
+                    "2.18",
+                    2.18
+                ],
+                [
+                    "2.19",
+                    2.19
+                ],
+                [
+                    "2.2",
+                    2.2
+                ],
+                [
+                    "2.21",
+                    2.21
+                ],
+                [
+                    "2.22",
+                    2.22
+                ],
+                [
+                    "2.23",
+                    2.23
+                ],
+                [
+                    "2.24",
+                    2.24
+                ],
+                [
+                    "2.25",
+                    2.25
+                ],
+                [
+                    "2.26",
+                    2.26
+                ],
+                [
+                    "2.27",
+                    2.27
+                ],
+                [
+                    "2.28",
+                    2.28
+                ],
+                [
+                    "2.29",
+                    2.29
+                ],
+                [
+                    "3.01",
+                    3.01
+                ],
+                [
+                    "3.02",
+                    3.02
+                ],
+                [
+                    "3.03",
+                    3.03
+                ],
+                [
+                    "3.04",
+                    3.04
+                ],
+                [
+                    "3.05",
+                    3.05
+                ],
+                [
+                    "3.06",
+                    3.06
+                ],
+                [
+                    "3.07",
+                    3.07
+                ],
+                [
+                    "3.08",
+                    3.08
+                ],
+                [
+                    "3.09",
+                    3.09
+                ],
+                [
+                    "3.1",
+                    3.1
+                ],
+                [
+                    "3.11",
+                    3.11
+                ],
+                [
+                    "3.12",
+                    3.12
+                ],
+                [
+                    "3.13",
+                    3.13
+                ],
+                [
+                    "3.14",
+                    3.14
+                ],
+                [
+                    "3.15",
+                    3.15
+                ],
+                [
+                    "3.16",
+                    3.16
+                ],
+                [
+                    "3.17",
+                    3.17
+                ],
+                [
+                    "3.18",
+                    3.18
+                ],
+                [
+                    "3.19",
+                    3.19
+                ],
+                [
+                    "3.2",
+                    3.2
+                ],
+                [
+                    "3.21",
+                    3.21
+                ],
+                [
+                    "3.22",
+                    3.22
+                ],
+                [
+                    "3.23",
+                    3.23
+                ],
+                [
+                    "3.24",
+                    3.24
+                ],
+                [
+                    "3.25",
+                    3.25
+                ],
+                [
+                    "3.26",
+                    3.26
+                ],
+                [
+                    "3.27",
+                    3.27
+                ],
+                [
+                    "3.28",
+                    3.28
+                ],
+                [
+                    "3.29",
+                    3.29
+                ],
+                [
+                    "3.3",
+                    3.3
+                ],
+                [
+                    "3.31",
+                    3.31
+                ],
+                [
+                    "4.01",
+                    4.01
+                ],
+                [
+                    "4.02",
+                    4.02
+                ],
+                [
+                    "4.03",
+                    4.03
+                ],
+                [
+                    "4.04",
+                    4.04
+                ],
+                [
+                    "4.05",
+                    4.05
+                ],
+                [
+                    "4.06",
+                    4.06
+                ],
+                [
+                    "4.07",
+                    4.07
+                ],
+                [
+                    "4.08",
+                    4.08
+                ],
+                [
+                    "4.09",
+                    4.09
+                ],
+                [
+                    "4.1",
+                    4.1
+                ],
+                [
+                    "4.11",
+                    4.11
+                ],
+                [
+                    "4.12",
+                    4.12
+                ],
+                [
+                    "4.13",
+                    4.13
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "dashed",
+                "color": "blue"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "itemStyle": {
+                "color": "blue"
+            },
+            "zlevel": 0,
+            "z": 0,
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "line",
+            "name": "\u786e\u8bca",
+            "connectNulls": false,
+            "yAxisIndex": 0,
+            "symbol": "circle",
+            "symbolSize": 3,
+            "showSymbol": true,
+            "smooth": false,
+            "step": false,
+            "data": [
+                [
+                    "1.13",
+                    41
+                ],
+                [
+                    "1.14",
+                    41
+                ],
+                [
+                    "1.15",
+                    41
+                ],
+                [
+                    "1.16",
+                    45
+                ],
+                [
+                    "1.17",
+                    62
+                ],
+                [
+                    "1.18",
+                    198
+                ],
+                [
+                    "1.19",
+                    275
+                ],
+                [
+                    "1.2",
+                    291
+                ],
+                [
+                    "1.21",
+                    440
+                ],
+                [
+                    "1.22",
+                    574
+                ],
+                [
+                    "1.23",
+                    835
+                ],
+                [
+                    "1.24",
+                    1297
+                ],
+                [
+                    "1.25",
+                    1985
+                ],
+                [
+                    "1.26",
+                    2761
+                ],
+                [
+                    "1.27",
+                    4535
+                ],
+                [
+                    "1.28",
+                    5997
+                ],
+                [
+                    "1.29",
+                    7736
+                ],
+                [
+                    "1.3",
+                    9720
+                ],
+                [
+                    "1.31",
+                    11821
+                ],
+                [
+                    "2.01",
+                    14411
+                ],
+                [
+                    "2.02",
+                    17238
+                ],
+                [
+                    "2.03",
+                    20471
+                ],
+                [
+                    "2.04",
+                    24363
+                ],
+                [
+                    "2.05",
+                    28060
+                ],
+                [
+                    "2.06",
+                    31211
+                ],
+                [
+                    "2.07",
+                    34598
+                ],
+                [
+                    "2.08",
+                    37251
+                ],
+                [
+                    "2.09",
+                    40235
+                ],
+                [
+                    "2.1",
+                    42708
+                ],
+                [
+                    "2.11",
+                    44730
+                ],
+                [
+                    "2.12",
+                    59882
+                ],
+                [
+                    "2.13",
+                    63932
+                ],
+                [
+                    "2.14",
+                    66576
+                ],
+                [
+                    "2.15",
+                    68584
+                ],
+                [
+                    "2.16",
+                    70635
+                ],
+                [
+                    "2.17",
+                    72528
+                ],
+                [
+                    "2.18",
+                    74279
+                ],
+                [
+                    "2.19",
+                    75002
+                ],
+                [
+                    "2.2",
+                    75993
+                ],
+                [
+                    "2.21",
+                    76392
+                ],
+                [
+                    "2.22",
+                    77041
+                ],
+                [
+                    "2.23",
+                    77262
+                ],
+                [
+                    "2.24",
+                    77779
+                ],
+                [
+                    "2.25",
+                    78190
+                ],
+                [
+                    "2.26",
+                    78630
+                ],
+                [
+                    "2.27",
+                    78959
+                ],
+                [
+                    "2.28",
+                    79389
+                ],
+                [
+                    "2.29",
+                    79968
+                ],
+                [
+                    "3.01",
+                    80174
+                ],
+                [
+                    "3.02",
+                    80302
+                ],
+                [
+                    "3.03",
+                    80422
+                ],
+                [
+                    "3.04",
+                    80565
+                ],
+                [
+                    "3.05",
+                    80710
+                ],
+                [
+                    "3.06",
+                    80813
+                ],
+                [
+                    "3.07",
+                    80859
+                ],
+                [
+                    "3.08",
+                    80904
+                ],
+                [
+                    "3.09",
+                    80924
+                ],
+                [
+                    "3.1",
+                    80955
+                ],
+                [
+                    "3.11",
+                    80992
+                ],
+                [
+                    "3.12",
+                    81003
+                ],
+                [
+                    "3.13",
+                    81021
+                ],
+                [
+                    "3.14",
+                    81048
+                ],
+                [
+                    "3.15",
+                    81077
+                ],
+                [
+                    "3.16",
+                    81116
+                ],
+                [
+                    "3.17",
+                    81151
+                ],
+                [
+                    "3.18",
+                    81235
+                ],
+                [
+                    "3.19",
+                    81300
+                ],
+                [
+                    "3.2",
+                    81416
+                ],
+                [
+                    "3.21",
+                    81498
+                ],
+                [
+                    "3.22",
+                    81600
+                ],
+                [
+                    "3.23",
+                    81747
+                ],
+                [
+                    "3.24",
+                    81846
+                ],
+                [
+                    "3.25",
+                    81960
+                ],
+                [
+                    "3.26",
+                    82078
+                ],
+                [
+                    "3.27",
+                    82213
+                ],
+                [
+                    "3.28",
+                    82341
+                ],
+                [
+                    "3.29",
+                    82447
+                ],
+                [
+                    "3.3",
+                    82545
+                ],
+                [
+                    "3.31",
+                    82631
+                ],
+                [
+                    "4.01",
+                    82724
+                ],
+                [
+                    "4.02",
+                    82802
+                ],
+                [
+                    "4.03",
+                    82861
+                ],
+                [
+                    "4.04",
+                    82930
+                ],
+                [
+                    "4.05",
+                    83005
+                ],
+                [
+                    "4.06",
+                    83071
+                ],
+                [
+                    "4.07",
+                    83157
+                ],
+                [
+                    "4.08",
+                    83249
+                ],
+                [
+                    "4.09",
+                    83305
+                ],
+                [
+                    "4.1",
+                    83369
+                ],
+                [
+                    "4.11",
+                    83482
+                ],
+                [
+                    "4.12",
+                    83602
+                ],
+                [
+                    "4.13",
+                    83696
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "dashed",
+                "color": "red"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "itemStyle": {
+                "color": "red"
+            },
+            "zlevel": 0,
+            "z": 0,
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "line",
+            "name": "\u6b7b\u4ea1",
+            "connectNulls": false,
+            "yAxisIndex": 1,
+            "symbol": "diamond",
+            "symbolSize": 5,
+            "showSymbol": true,
+            "smooth": false,
+            "step": false,
+            "data": [
+                [
+                    "1.13",
+                    1
+                ],
+                [
+                    "1.14",
+                    1
+                ],
+                [
+                    "1.15",
+                    2
+                ],
+                [
+                    "1.16",
+                    2
+                ],
+                [
+                    "1.17",
+                    2
+                ],
+                [
+                    "1.18",
+                    3
+                ],
+                [
+                    "1.19",
+                    4
+                ],
+                [
+                    "1.2",
+                    6
+                ],
+                [
+                    "1.21",
+                    9
+                ],
+                [
+                    "1.22",
+                    17
+                ],
+                [
+                    "1.23",
+                    25
+                ],
+                [
+                    "1.24",
+                    41
+                ],
+                [
+                    "1.25",
+                    56
+                ],
+                [
+                    "1.26",
+                    80
+                ],
+                [
+                    "1.27",
+                    106
+                ],
+                [
+                    "1.28",
+                    132
+                ],
+                [
+                    "1.29",
+                    170
+                ],
+                [
+                    "1.3",
+                    213
+                ],
+                [
+                    "1.31",
+                    259
+                ],
+                [
+                    "2.01",
+                    304
+                ],
+                [
+                    "2.02",
+                    361
+                ],
+                [
+                    "2.03",
+                    425
+                ],
+                [
+                    "2.04",
+                    491
+                ],
+                [
+                    "2.05",
+                    564
+                ],
+                [
+                    "2.06",
+                    637
+                ],
+                [
+                    "2.07",
+                    723
+                ],
+                [
+                    "2.08",
+                    812
+                ],
+                [
+                    "2.09",
+                    909
+                ],
+                [
+                    "2.1",
+                    1017
+                ],
+                [
+                    "2.11",
+                    1114
+                ],
+                [
+                    "2.12",
+                    1368
+                ],
+                [
+                    "2.13",
+                    1381
+                ],
+                [
+                    "2.14",
+                    1524
+                ],
+                [
+                    "2.15",
+                    1666
+                ],
+                [
+                    "2.16",
+                    1772
+                ],
+                [
+                    "2.17",
+                    1870
+                ],
+                [
+                    "2.18",
+                    2006
+                ],
+                [
+                    "2.19",
+                    2121
+                ],
+                [
+                    "2.2",
+                    2239
+                ],
+                [
+                    "2.21",
+                    2348
+                ],
+                [
+                    "2.22",
+                    2445
+                ],
+                [
+                    "2.23",
+                    2595
+                ],
+                [
+                    "2.24",
+                    2666
+                ],
+                [
+                    "2.25",
+                    2718
+                ],
+                [
+                    "2.26",
+                    2747
+                ],
+                [
+                    "2.27",
+                    2791
+                ],
+                [
+                    "2.28",
+                    2838
+                ],
+                [
+                    "2.29",
+                    2873
+                ],
+                [
+                    "3.01",
+                    2915
+                ],
+                [
+                    "3.02",
+                    2946
+                ],
+                [
+                    "3.03",
+                    2984
+                ],
+                [
+                    "3.04",
+                    3015
+                ],
+                [
+                    "3.05",
+                    3045
+                ],
+                [
+                    "3.06",
+                    3073
+                ],
+                [
+                    "3.07",
+                    3100
+                ],
+                [
+                    "3.08",
+                    3123
+                ],
+                [
+                    "3.09",
+                    3140
+                ],
+                [
+                    "3.1",
+                    3162
+                ],
+                [
+                    "3.11",
+                    3173
+                ],
+                [
+                    "3.12",
+                    3180
+                ],
+                [
+                    "3.13",
+                    3194
+                ],
+                [
+                    "3.14",
+                    3204
+                ],
+                [
+                    "3.15",
+                    3218
+                ],
+                [
+                    "3.16",
+                    3231
+                ],
+                [
+                    "3.17",
+                    3242
+                ],
+                [
+                    "3.18",
+                    3250
+                ],
+                [
+                    "3.19",
+                    3253
+                ],
+                [
+                    "3.2",
+                    3261
+                ],
+                [
+                    "3.21",
+                    3267
+                ],
+                [
+                    "3.22",
+                    3276
+                ],
+                [
+                    "3.23",
+                    3283
+                ],
+                [
+                    "3.24",
+                    3287
+                ],
+                [
+                    "3.25",
+                    3293
+                ],
+                [
+                    "3.26",
+                    3298
+                ],
+                [
+                    "3.27",
+                    3301
+                ],
+                [
+                    "3.28",
+                    3306
+                ],
+                [
+                    "3.29",
+                    3311
+                ],
+                [
+                    "3.3",
+                    3314
+                ],
+                [
+                    "3.31",
+                    3321
+                ],
+                [
+                    "4.01",
+                    3327
+                ],
+                [
+                    "4.02",
+                    3331
+                ],
+                [
+                    "4.03",
+                    3335
+                ],
+                [
+                    "4.04",
+                    3338
+                ],
+                [
+                    "4.05",
+                    3340
+                ],
+                [
+                    "4.06",
+                    3340
+                ],
+                [
+                    "4.07",
+                    3342
+                ],
+                [
+                    "4.08",
+                    3344
+                ],
+                [
+                    "4.09",
+                    3345
+                ],
+                [
+                    "4.1",
+                    3349
+                ],
+                [
+                    "4.11",
+                    3349
+                ],
+                [
+                    "4.12",
+                    3351
+                ],
+                [
+                    "4.13",
+                    3351
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "dashed",
+                "color": "lightsalmon"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "itemStyle": {
+                "color": "lightsalmon"
+            },
+            "zlevel": 0,
+            "z": 0,
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "line",
+            "name": "\u6cbb\u6108",
+            "connectNulls": false,
+            "yAxisIndex": 1,
+            "symbol": "triangle",
+            "symbolSize": 5,
+            "showSymbol": true,
+            "smooth": false,
+            "step": false,
+            "data": [
+                [
+                    "1.13",
+                    0
+                ],
+                [
+                    "1.14",
+                    0
+                ],
+                [
+                    "1.15",
+                    5
+                ],
+                [
+                    "1.16",
+                    8
+                ],
+                [
+                    "1.17",
+                    12
+                ],
+                [
+                    "1.18",
+                    17
+                ],
+                [
+                    "1.19",
+                    18
+                ],
+                [
+                    "1.2",
+                    25
+                ],
+                [
+                    "1.21",
+                    25
+                ],
+                [
+                    "1.22",
+                    25
+                ],
+                [
+                    "1.23",
+                    34
+                ],
+                [
+                    "1.24",
+                    38
+                ],
+                [
+                    "1.25",
+                    49
+                ],
+                [
+                    "1.26",
+                    51
+                ],
+                [
+                    "1.27",
+                    60
+                ],
+                [
+                    "1.28",
+                    103
+                ],
+                [
+                    "1.29",
+                    124
+                ],
+                [
+                    "1.3",
+                    171
+                ],
+                [
+                    "1.31",
+                    243
+                ],
+                [
+                    "2.01",
+                    328
+                ],
+                [
+                    "2.02",
+                    475
+                ],
+                [
+                    "2.03",
+                    632
+                ],
+                [
+                    "2.04",
+                    892
+                ],
+                [
+                    "2.05",
+                    1153
+                ],
+                [
+                    "2.06",
+                    1542
+                ],
+                [
+                    "2.07",
+                    2052
+                ],
+                [
+                    "2.08",
+                    2651
+                ],
+                [
+                    "2.09",
+                    3283
+                ],
+                [
+                    "2.1",
+                    3998
+                ],
+                [
+                    "2.11",
+                    4742
+                ],
+                [
+                    "2.12",
+                    5915
+                ],
+                [
+                    "2.13",
+                    6728
+                ],
+                [
+                    "2.14",
+                    8101
+                ],
+                [
+                    "2.15",
+                    9425
+                ],
+                [
+                    "2.16",
+                    10853
+                ],
+                [
+                    "2.17",
+                    12561
+                ],
+                [
+                    "2.18",
+                    14387
+                ],
+                [
+                    "2.19",
+                    16157
+                ],
+                [
+                    "2.2",
+                    18266
+                ],
+                [
+                    "2.21",
+                    20673
+                ],
+                [
+                    "2.22",
+                    22907
+                ],
+                [
+                    "2.23",
+                    24757
+                ],
+                [
+                    "2.24",
+                    27353
+                ],
+                [
+                    "2.25",
+                    29775
+                ],
+                [
+                    "2.26",
+                    32531
+                ],
+                [
+                    "2.27",
+                    36157
+                ],
+                [
+                    "2.28",
+                    39049
+                ],
+                [
+                    "2.29",
+                    41675
+                ],
+                [
+                    "3.01",
+                    44518
+                ],
+                [
+                    "3.02",
+                    47260
+                ],
+                [
+                    "3.03",
+                    49914
+                ],
+                [
+                    "3.04",
+                    52109
+                ],
+                [
+                    "3.05",
+                    53793
+                ],
+                [
+                    "3.06",
+                    55477
+                ],
+                [
+                    "3.07",
+                    57143
+                ],
+                [
+                    "3.08",
+                    58684
+                ],
+                [
+                    "3.09",
+                    59982
+                ],
+                [
+                    "3.1",
+                    61567
+                ],
+                [
+                    "3.11",
+                    62887
+                ],
+                [
+                    "3.12",
+                    64216
+                ],
+                [
+                    "3.13",
+                    65649
+                ],
+                [
+                    "3.14",
+                    67022
+                ],
+                [
+                    "3.15",
+                    67863
+                ],
+                [
+                    "3.16",
+                    68799
+                ],
+                [
+                    "3.17",
+                    69725
+                ],
+                [
+                    "3.18",
+                    70547
+                ],
+                [
+                    "3.19",
+                    71284
+                ],
+                [
+                    "3.2",
+                    71876
+                ],
+                [
+                    "3.21",
+                    72382
+                ],
+                [
+                    "3.22",
+                    72841
+                ],
+                [
+                    "3.23",
+                    73299
+                ],
+                [
+                    "3.24",
+                    73791
+                ],
+                [
+                    "3.25",
+                    74196
+                ],
+                [
+                    "3.26",
+                    74737
+                ],
+                [
+                    "3.27",
+                    75122
+                ],
+                [
+                    "3.28",
+                    75600
+                ],
+                [
+                    "3.29",
+                    75937
+                ],
+                [
+                    "3.3",
+                    76225
+                ],
+                [
+                    "3.31",
+                    76415
+                ],
+                [
+                    "4.01",
+                    76610
+                ],
+                [
+                    "4.02",
+                    76785
+                ],
+                [
+                    "4.03",
+                    76984
+                ],
+                [
+                    "4.04",
+                    77210
+                ],
+                [
+                    "4.05",
+                    77348
+                ],
+                [
+                    "4.06",
+                    77450
+                ],
+                [
+                    "4.07",
+                    77586
+                ],
+                [
+                    "4.08",
+                    77711
+                ],
+                [
+                    "4.09",
+                    77838
+                ],
+                [
+                    "4.1",
+                    77935
+                ],
+                [
+                    "4.11",
+                    78020
+                ],
+                [
+                    "4.12",
+                    78145
+                ],
+                [
+                    "4.13",
+                    78262
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "dashed",
+                "color": "green"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "itemStyle": {
+                "color": "green"
+            },
+            "zlevel": 0,
+            "z": 0,
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u73b0\u786e\u8bca",
+                "\u786e\u8bca",
+                "\u6b7b\u4ea1",
+                "\u6cbb\u6108"
+            ],
+            "selected": {
+                "\u73b0\u786e\u8bca": true,
+                "\u786e\u8bca": true,
+                "\u6b7b\u4ea1": true,
+                "\u6cbb\u6108": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "axis",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "xAxis": [
+        {
+            "name": "\u65e5\u671f",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "nameRotate": -30,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "1.13",
+                "1.14",
+                "1.15",
+                "1.16",
+                "1.17",
+                "1.18",
+                "1.19",
+                "1.2",
+                "1.21",
+                "1.22",
+                "1.23",
+                "1.24",
+                "1.25",
+                "1.26",
+                "1.27",
+                "1.28",
+                "1.29",
+                "1.3",
+                "1.31",
+                "2.01",
+                "2.02",
+                "2.03",
+                "2.04",
+                "2.05",
+                "2.06",
+                "2.07",
+                "2.08",
+                "2.09",
+                "2.1",
+                "2.11",
+                "2.12",
+                "2.13",
+                "2.14",
+                "2.15",
+                "2.16",
+                "2.17",
+                "2.18",
+                "2.19",
+                "2.2",
+                "2.21",
+                "2.22",
+                "2.23",
+                "2.24",
+                "2.25",
+                "2.26",
+                "2.27",
+                "2.28",
+                "2.29",
+                "3.01",
+                "3.02",
+                "3.03",
+                "3.04",
+                "3.05",
+                "3.06",
+                "3.07",
+                "3.08",
+                "3.09",
+                "3.1",
+                "3.11",
+                "3.12",
+                "3.13",
+                "3.14",
+                "3.15",
+                "3.16",
+                "3.17",
+                "3.18",
+                "3.19",
+                "3.2",
+                "3.21",
+                "3.22",
+                "3.23",
+                "3.24",
+                "3.25",
+                "3.26",
+                "3.27",
+                "3.28",
+                "3.29",
+                "3.3",
+                "3.31",
+                "4.01",
+                "4.02",
+                "4.03",
+                "4.04",
+                "4.05",
+                "4.06",
+                "4.07",
+                "4.08",
+                "4.09",
+                "4.1",
+                "4.11",
+                "4.12",
+                "4.13"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "axisTick": {
+                "show": true,
+                "alignWithLabel": false,
+                "inside": false
+            },
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        },
+        {
+            "type": "value",
+            "name": "\u6b7b\u4ea1/\u6cbb\u6108",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "position": "right",
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        },
+        {
+            "type": "value",
+            "name": "\u73b0\u786e\u8bca/\u7d2f\u8ba1\u786e\u8bca",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "position": "left",
+            "offset": 0,
+            "splitNumber": 10,
+            "min": 2000,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "\u4e2d\u56fd\u6bcf\u65e5\u75ab\u60c5\u6570\u636e",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "dataZoom": {
+        "show": true,
+        "type": "slider",
+        "realtime": true,
+        "start": 20,
+        "end": 80,
+        "orient": "horizontal",
+        "zoomLock": false
+    }
+};
+        chart_20de57e942844a26a1c6f82325e09ce6.setOption(option_20de57e942844a26a1c6f82325e09ce6);
+    </script>
+                <div id="ed1ff094663c46899bfc816091fd57ab" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_ed1ff094663c46899bfc816091fd57ab = echarts.init(
+            document.getElementById('ed1ff094663c46899bfc816091fd57ab'), 'white', {renderer: 'canvas'});
+        var option_ed1ff094663c46899bfc816091fd57ab = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "pie",
+            "name": "\u6b7b\u4ea1\u4eba\u6570",
+            "clockwise": true,
+            "data": [
+                {
+                    "name": "\u4e0a\u6d77",
+                    "value": 7
+                },
+                {
+                    "name": "\u4e91\u5357",
+                    "value": 2
+                },
+                {
+                    "name": "\u5185\u8499\u53e4",
+                    "value": 1
+                },
+                {
+                    "name": "\u5317\u4eac",
+                    "value": 8
+                },
+                {
+                    "name": "\u53f0\u6e7e",
+                    "value": 6
+                },
+                {
+                    "name": "\u5409\u6797",
+                    "value": 1
+                },
+                {
+                    "name": "\u56db\u5ddd",
+                    "value": 3
+                },
+                {
+                    "name": "\u5929\u6d25",
+                    "value": 3
+                },
+                {
+                    "name": "\u5b81\u590f",
+                    "value": 0
+                },
+                {
+                    "name": "\u5b89\u5fbd",
+                    "value": 6
+                },
+                {
+                    "name": "\u5c71\u4e1c",
+                    "value": 7
+                },
+                {
+                    "name": "\u5c71\u897f",
+                    "value": 0
+                },
+                {
+                    "name": "\u5e7f\u4e1c",
+                    "value": 8
+                },
+                {
+                    "name": "\u5e7f\u897f",
+                    "value": 2
+                },
+                {
+                    "name": "\u65b0\u7586",
+                    "value": 3
+                },
+                {
+                    "name": "\u6c5f\u82cf",
+                    "value": 0
+                },
+                {
+                    "name": "\u6c5f\u897f",
+                    "value": 1
+                },
+                {
+                    "name": "\u6cb3\u5317",
+                    "value": 6
+                },
+                {
+                    "name": "\u6cb3\u5357",
+                    "value": 22
+                },
+                {
+                    "name": "\u6d59\u6c5f",
+                    "value": 1
+                },
+                {
+                    "name": "\u6d77\u5357",
+                    "value": 6
+                },
+                {
+                    "name": "\u6e56\u5317",
+                    "value": 3221
+                },
+                {
+                    "name": "\u6e56\u5357",
+                    "value": 4
+                },
+                {
+                    "name": "\u6fb3\u95e8",
+                    "value": 0
+                },
+                {
+                    "name": "\u7518\u8083",
+                    "value": 2
+                },
+                {
+                    "name": "\u798f\u5efa",
+                    "value": 1
+                },
+                {
+                    "name": "\u897f\u85cf",
+                    "value": 0
+                },
+                {
+                    "name": "\u8d35\u5dde",
+                    "value": 2
+                },
+                {
+                    "name": "\u8fbd\u5b81",
+                    "value": 2
+                },
+                {
+                    "name": "\u91cd\u5e86",
+                    "value": 6
+                },
+                {
+                    "name": "\u9655\u897f",
+                    "value": 3
+                },
+                {
+                    "name": "\u9752\u6d77",
+                    "value": 0
+                },
+                {
+                    "name": "\u9999\u6e2f",
+                    "value": 4
+                },
+                {
+                    "name": "\u9ed1\u9f99\u6c5f",
+                    "value": 13
+                }
+            ],
+            "radius": [
+                "25%",
+                "50%"
+            ],
+            "center": [
+                "20%",
+                "70%"
+            ],
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8,
+                "formatter": "{b}: {c}"
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "pie",
+            "name": "\u6cbb\u6108\u4eba\u6570",
+            "clockwise": true,
+            "data": [
+                {
+                    "name": "\u4e0a\u6d77",
+                    "value": 468
+                },
+                {
+                    "name": "\u4e91\u5357",
+                    "value": 175
+                },
+                {
+                    "name": "\u5185\u8499\u53e4",
+                    "value": 91
+                },
+                {
+                    "name": "\u5317\u4eac",
+                    "value": 491
+                },
+                {
+                    "name": "\u53f0\u6e7e",
+                    "value": 114
+                },
+                {
+                    "name": "\u5409\u6797",
+                    "value": 96
+                },
+                {
+                    "name": "\u56db\u5ddd",
+                    "value": 548
+                },
+                {
+                    "name": "\u5929\u6d25",
+                    "value": 168
+                },
+                {
+                    "name": "\u5b81\u590f",
+                    "value": 75
+                },
+                {
+                    "name": "\u5b89\u5fbd",
+                    "value": 984
+                },
+                {
+                    "name": "\u5c71\u4e1c",
+                    "value": 759
+                },
+                {
+                    "name": "\u5c71\u897f",
+                    "value": 135
+                },
+                {
+                    "name": "\u5e7f\u4e1c",
+                    "value": 1458
+                },
+                {
+                    "name": "\u5e7f\u897f",
+                    "value": 252
+                },
+                {
+                    "name": "\u65b0\u7586",
+                    "value": 73
+                },
+                {
+                    "name": "\u6c5f\u82cf",
+                    "value": 641
+                },
+                {
+                    "name": "\u6c5f\u897f",
+                    "value": 936
+                },
+                {
+                    "name": "\u6cb3\u5317",
+                    "value": 314
+                },
+                {
+                    "name": "\u6cb3\u5357",
+                    "value": 1254
+                },
+                {
+                    "name": "\u6d59\u6c5f",
+                    "value": 1242
+                },
+                {
+                    "name": "\u6d77\u5357",
+                    "value": 162
+                },
+                {
+                    "name": "\u6e56\u5317",
+                    "value": 64363
+                },
+                {
+                    "name": "\u6e56\u5357",
+                    "value": 1014
+                },
+                {
+                    "name": "\u6fb3\u95e8",
+                    "value": 13
+                },
+                {
+                    "name": "\u7518\u8083",
+                    "value": 136
+                },
+                {
+                    "name": "\u798f\u5efa",
+                    "value": 329
+                },
+                {
+                    "name": "\u897f\u85cf",
+                    "value": 1
+                },
+                {
+                    "name": "\u8d35\u5dde",
+                    "value": 144
+                },
+                {
+                    "name": "\u8fbd\u5b81",
+                    "value": 138
+                },
+                {
+                    "name": "\u91cd\u5e86",
+                    "value": 570
+                },
+                {
+                    "name": "\u9655\u897f",
+                    "value": 248
+                },
+                {
+                    "name": "\u9752\u6d77",
+                    "value": 18
+                },
+                {
+                    "name": "\u9999\u6e2f",
+                    "value": 434
+                },
+                {
+                    "name": "\u9ed1\u9f99\u6c5f",
+                    "value": 470
+                }
+            ],
+            "radius": [
+                "25%",
+                "50%"
+            ],
+            "center": [
+                "60%",
+                "70%"
+            ],
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8,
+                "formatter": "{b}: {c}"
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u4e0a\u6d77",
+                "\u4e91\u5357",
+                "\u5185\u8499\u53e4",
+                "\u5317\u4eac",
+                "\u53f0\u6e7e",
+                "\u5409\u6797",
+                "\u56db\u5ddd",
+                "\u5929\u6d25",
+                "\u5b81\u590f",
+                "\u5b89\u5fbd",
+                "\u5c71\u4e1c",
+                "\u5c71\u897f",
+                "\u5e7f\u4e1c",
+                "\u5e7f\u897f",
+                "\u65b0\u7586",
+                "\u6c5f\u82cf",
+                "\u6c5f\u897f",
+                "\u6cb3\u5317",
+                "\u6cb3\u5357",
+                "\u6d59\u6c5f",
+                "\u6d77\u5357",
+                "\u6e56\u5317",
+                "\u6e56\u5357",
+                "\u6fb3\u95e8",
+                "\u7518\u8083",
+                "\u798f\u5efa",
+                "\u897f\u85cf",
+                "\u8d35\u5dde",
+                "\u8fbd\u5b81",
+                "\u91cd\u5e86",
+                "\u9655\u897f",
+                "\u9752\u6d77",
+                "\u9999\u6e2f",
+                "\u9ed1\u9f99\u6c5f"
+            ],
+            "selected": {},
+            "type": "scroll",
+            "show": true,
+            "left": "90%",
+            "top": "20%",
+            "orient": "vertical",
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "title": [
+        {
+            "text": "\u56fd\u5185\u57ce\u5e02\u6b7b\u4ea1/\u6cbb\u6108\u4eba\u6570\u997c\u56fe",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_ed1ff094663c46899bfc816091fd57ab.setOption(option_ed1ff094663c46899bfc816091fd57ab);
+    </script>
+                <div id="0b0bdc0680c44bfb8ad35705192ea164" class="chart-container" style="width:1000px; height:500px;"></div>
+    <script>
+        var chart_0b0bdc0680c44bfb8ad35705192ea164 = echarts.init(
+            document.getElementById('0b0bdc0680c44bfb8ad35705192ea164'), 'white', {renderer: 'canvas'});
+        var option_0b0bdc0680c44bfb8ad35705192ea164 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "bar",
+            "name": "\u65b0\u589e\u786e\u8bca",
+            "data": [
+                24221,
+                3045,
+                3153,
+                4202,
+                2518,
+                4342,
+                1574,
+                4093,
+                530,
+                870,
+                290,
+                1300,
+                1330,
+                2774,
+                514,
+                141,
+                633,
+                497,
+                992,
+                27,
+                1301,
+                2265,
+                275,
+                63,
+                0,
+                115,
+                246,
+                178,
+                76,
+                143,
+                68,
+                344,
+                435,
+                291,
+                353,
+                170,
+                282,
+                398,
+                424,
+                72,
+                197,
+                270,
+                11,
+                362,
+                720,
+                0,
+                97,
+                76,
+                34,
+                242,
+                69,
+                125,
+                0,
+                69,
+                135,
+                92,
+                10,
+                54,
+                174,
+                54,
+                0,
+                41,
+                17,
+                55,
+                8,
+                223,
+                49,
+                179,
+                53,
+                8,
+                28,
+                209,
+                54,
+                28,
+                66,
+                86,
+                0,
+                19,
+                49,
+                28,
+                0,
+                0,
+                2,
+                0,
+                9,
+                52,
+                17,
+                0,
+                19,
+                18,
+                3,
+                8,
+                11,
+                10,
+                9,
+                2,
+                15,
+                113,
+                149,
+                24,
+                20,
+                0,
+                30,
+                8,
+                30,
+                5,
+                1,
+                6,
+                2,
+                0,
+                8,
+                12,
+                6,
+                12,
+                12,
+                0,
+                1,
+                0,
+                0,
+                0,
+                2,
+                0,
+                8,
+                0,
+                1,
+                1,
+                1,
+                21,
+                0,
+                35,
+                8,
+                0,
+                0,
+                2,
+                3,
+                2,
+                2,
+                7,
+                0,
+                0,
+                0,
+                0,
+                13,
+                10,
+                1,
+                0,
+                0,
+                5,
+                0,
+                0,
+                0,
+                0,
+                0,
+                4,
+                3,
+                0,
+                0,
+                2,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "bar",
+            "name": "\u7d2f\u8ba1\u786e\u8bca",
+            "data": [
+                583220,
+                172541,
+                159516,
+                137887,
+                130434,
+                89569,
+                74877,
+                61049,
+                31119,
+                27580,
+                25913,
+                25680,
+                23955,
+                21102,
+                17448,
+                14159,
+                11868,
+                11445,
+                10647,
+                10564,
+                10541,
+                9784,
+                7645,
+                7529,
+                7525,
+                7049,
+                6879,
+                6691,
+                6623,
+                6494,
+                6059,
+                5837,
+                5369,
+                5223,
+                5014,
+                4987,
+                4839,
+                4521,
+                4054,
+                3472,
+                3428,
+                3372,
+                3292,
+                3281,
+                3252,
+                3167,
+                3161,
+                2852,
+                2613,
+                2415,
+                2277,
+                2190,
+                2145,
+                1983,
+                1847,
+                1838,
+                1711,
+                1704,
+                1522,
+                1512,
+                1378,
+                1373,
+                1366,
+                1355,
+                1220,
+                1202,
+                1197,
+                1113,
+                1083,
+                1070,
+                1067,
+                1012,
+                908,
+                848,
+                835,
+                813,
+                726,
+                726,
+                714,
+                713,
+                712,
+                662,
+                657,
+                646,
+                641,
+                626,
+                612,
+                566,
+                548,
+                515,
+                483,
+                475,
+                430,
+                407,
+                393,
+                391,
+                371,
+                363,
+                363,
+                354,
+                343,
+                324,
+                316,
+                299,
+                296,
+                278,
+                266,
+                241,
+                219,
+                208,
+                189,
+                167,
+                161,
+                159,
+                149,
+                136,
+                127,
+                123,
+                122,
+                113,
+                108,
+                93,
+                82,
+                79,
+                77,
+                73,
+                72,
+                62,
+                60,
+                60,
+                59,
+                57,
+                54,
+                49,
+                49,
+                47,
+                45,
+                40,
+                38,
+                37,
+                35,
+                34,
+                30,
+                29,
+                26,
+                25,
+                23,
+                23,
+                21,
+                21,
+                20,
+                19,
+                19,
+                18,
+                17,
+                16,
+                16,
+                16,
+                16,
+                16,
+                15,
+                15,
+                14,
+                13,
+                12,
+                12,
+                11,
+                11,
+                11,
+                10,
+                10,
+                9,
+                9,
+                8,
+                7,
+                6,
+                5,
+                5,
+                2,
+                1
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "bar",
+            "name": "\u6cbb\u6108",
+            "data": [
+                23654,
+                18056,
+                20465,
+                14986,
+                3220,
+                11346,
+                4683,
+                1296,
+                4157,
+                2955,
+                1162,
+                780,
+                1361,
+                170,
+                567,
+                384,
+                117,
+                1033,
+                365,
+                222,
+                358,
+                216,
+                143,
+                355,
+                82,
+                251,
+                351,
+                299,
+                139,
+                61,
+                147,
+                96,
+                73,
+                335,
+                332,
+                82,
+                459,
+                25,
+                80,
+                94,
+                7,
+                98,
+                69,
+                33,
+                10,
+                177,
+                64,
+                112,
+                41,
+                27,
+                101,
+                164,
+                99,
+                313,
+                36,
+                126,
+                8,
+                31,
+                7,
+                122,
+                78,
+                31,
+                9,
+                3,
+                56,
+                14,
+                13,
+                4,
+                40,
+                24,
+                16,
+                46,
+                44,
+                14,
+                2,
+                4,
+                21,
+                34,
+                23,
+                35,
+                12,
+                12,
+                5,
+                29,
+                21,
+                6,
+                3,
+                8,
+                13,
+                27,
+                8,
+                24,
+                5,
+                26,
+                3,
+                7,
+                36,
+                0,
+                2,
+                28,
+                10,
+                9,
+                12,
+                2,
+                3,
+                4,
+                0,
+                20,
+                7,
+                9,
+                9,
+                5,
+                1,
+                7,
+                6,
+                1,
+                0,
+                10,
+                0,
+                8,
+                0,
+                1,
+                3,
+                1,
+                3,
+                4,
+                4,
+                4,
+                5,
+                2,
+                6,
+                1,
+                0,
+                8,
+                3,
+                6,
+                2,
+                3,
+                0,
+                1,
+                1,
+                0,
+                0,
+                4,
+                1,
+                2,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                2,
+                3,
+                0,
+                0,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "bar",
+            "name": "\u6b7b\u4ea1",
+            "data": [
+                44319,
+                67504,
+                35435,
+                28011,
+                68200,
+                303,
+                48129,
+                3957,
+                6868,
+                297,
+                13700,
+                7758,
+                2979,
+                1694,
+                347,
+                7633,
+                2000,
+                381,
+                25,
+                7534,
+                1205,
+                2642,
+                799,
+                597,
+                2367,
+                618,
+                1051,
+                2689,
+                32,
+                2186,
+                527,
+                1378,
+                889,
+                295,
+                1964,
+                2478,
+                426,
+                852,
+                118,
+                61,
+                373,
+                119,
+                500,
+                203,
+                611,
+                152,
+                300,
+                319,
+                1405,
+                410,
+                559,
+                589,
+                269,
+                601,
+                134,
+                210,
+                933,
+                415,
+                645,
+                122,
+                717,
+                115,
+                628,
+                176,
+                152,
+                203,
+                351,
+                99,
+                236,
+                101,
+                265,
+                42,
+                86,
+                130,
+                113,
+                130,
+                121,
+                43,
+                40,
+                81,
+                639,
+                65,
+                16,
+                128,
+                80,
+                89,
+                62,
+                4,
+                86,
+                161,
+                248,
+                248,
+                71,
+                7,
+                44,
+                215,
+                53,
+                31,
+                53,
+                6,
+                91,
+                42,
+                0,
+                183,
+                68,
+                5,
+                169,
+                20,
+                61,
+                40,
+                110,
+                19,
+                18,
+                22,
+                25,
+                107,
+                42,
+                26,
+                91,
+                17,
+                23,
+                6,
+                14,
+                55,
+                32,
+                19,
+                13,
+                2,
+                5,
+                2,
+                4,
+                1,
+                8,
+                6,
+                7,
+                8,
+                30,
+                0,
+                0,
+                0,
+                5,
+                0,
+                5,
+                4,
+                9,
+                5,
+                3,
+                2,
+                4,
+                2,
+                14,
+                1,
+                4,
+                0,
+                0,
+                8,
+                3,
+                1,
+                0,
+                0,
+                8,
+                4,
+                0,
+                0,
+                0,
+                1,
+                0,
+                4,
+                0,
+                6,
+                1,
+                4,
+                2,
+                2,
+                2,
+                1,
+                0,
+                2,
+                0,
+                0
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u65b0\u589e\u786e\u8bca",
+                "\u7d2f\u8ba1\u786e\u8bca",
+                "\u6cbb\u6108",
+                "\u6b7b\u4ea1"
+            ],
+            "selected": {
+                "\u65b0\u589e\u786e\u8bca": true,
+                "\u7d2f\u8ba1\u786e\u8bca": true,
+                "\u6cbb\u6108": true,
+                "\u6b7b\u4ea1": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "axis",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "xAxis": [
+        {
+            "name": "\u56fd\u5bb6",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "\u7f8e\u56fd",
+                "\u897f\u73ed\u7259",
+                "\u610f\u5927\u5229",
+                "\u6cd5\u56fd",
+                "\u5fb7\u56fd",
+                "\u82f1\u56fd",
+                "\u4f0a\u6717",
+                "\u571f\u8033\u5176",
+                "\u6bd4\u5229\u65f6",
+                "\u8377\u5170",
+                "\u745e\u58eb",
+                "\u52a0\u62ff\u5927",
+                "\u5df4\u897f",
+                "\u4fc4\u7f57\u65af",
+                "\u8461\u8404\u7259",
+                "\u5965\u5730\u5229",
+                "\u4ee5\u8272\u5217",
+                "\u745e\u5178",
+                "\u7231\u5c14\u5170",
+                "\u97e9\u56fd",
+                "\u5370\u5ea6",
+                "\u79d8\u9c81",
+                "\u65e5\u672c\u672c\u571f",
+                "\u5384\u74dc\u591a\u5c14",
+                "\u667a\u5229",
+                "\u6ce2\u5170",
+                "\u7f57\u9a6c\u5c3c\u4e9a",
+                "\u4e39\u9ea6",
+                "\u632a\u5a01",
+                "\u6fb3\u5927\u5229\u4e9a",
+                "\u6377\u514b",
+                "\u5df4\u57fa\u65af\u5766",
+                "\u6c99\u7279\u963f\u62c9\u4f2f",
+                "\u83f2\u5f8b\u5bbe",
+                "\u58a8\u897f\u54e5",
+                "\u9a6c\u6765\u897f\u4e9a",
+                "\u5370\u5ea6\u5c3c\u897f\u4e9a",
+                "\u963f\u8054\u914b",
+                "\u585e\u5c14\u7ef4\u4e9a",
+                "\u5df4\u62ff\u9a6c",
+                "\u5361\u5854\u5c14",
+                "\u4e4c\u514b\u5170",
+                "\u5362\u68ee\u5821",
+                "\u767d\u4fc4\u7f57\u65af",
+                "\u65b0\u52a0\u5761",
+                "\u591a\u7c73\u5c3c\u52a0",
+                "\u82ac\u5170",
+                "\u54e5\u4f26\u6bd4\u4e9a",
+                "\u6cf0\u56fd",
+                "\u5357\u975e",
+                "\u963f\u6839\u5ef7",
+                "\u57c3\u53ca",
+                "\u5e0c\u814a",
+                "\u963f\u5c14\u53ca\u5229\u4e9a",
+                "\u6469\u5c14\u591a\u74e6",
+                "\u6469\u6d1b\u54e5",
+                "\u51b0\u5c9b",
+                "\u514b\u7f57\u5730\u4e9a",
+                "\u5df4\u6797",
+                "\u5308\u7259\u5229",
+                "\u4f0a\u62c9\u514b",
+                "\u7231\u6c99\u5c3c\u4e9a",
+                "\u65b0\u897f\u5170",
+                "\u79d1\u5a01\u7279",
+                "\u65af\u6d1b\u6587\u5c3c\u4e9a",
+                "\u54c8\u8428\u514b\u65af\u5766",
+                "\u963f\u585e\u62dc\u7586",
+                "\u4e4c\u5179\u522b\u514b\u65af\u5766",
+                "\u6ce2\u9ed1",
+                "\u7acb\u9676\u5b9b",
+                "\u4e9a\u7f8e\u5c3c\u4e9a",
+                "\u5b5f\u52a0\u62c9",
+                "\u5317\u9a6c\u5176\u987f",
+                "\u5580\u9ea6\u9686",
+                "\u65af\u6d1b\u4f10\u514b",
+                "\u963f\u66fc",
+                "\u53e4\u5df4",
+                "\u7a81\u5c3c\u65af",
+                "\u963f\u5bcc\u6c57",
+                "\u4fdd\u52a0\u5229\u4e9a",
+                "\u94bb\u77f3\u53f7\u90ae\u8f6e",
+                "\u585e\u6d66\u8def\u65af",
+                "\u62c9\u8131\u7ef4\u4e9a",
+                "\u5b89\u9053\u5c14",
+                "\u9ece\u5df4\u5ae9",
+                "\u79d1\u7279\u8fea\u74e6",
+                "\u54e5\u65af\u8fbe\u9ece\u52a0",
+                "\u52a0\u7eb3",
+                "\u5c3c\u65e5\u5c14",
+                "\u5e03\u57fa\u7eb3\u6cd5\u7d22",
+                "\u4e4c\u62c9\u572d",
+                "\u963f\u5c14\u5df4\u5c3c\u4e9a",
+                "\u5409\u5c14\u5409\u65af\u65af\u5766",
+                "\u6d2a\u90fd\u62c9\u65af",
+                "\u9a6c\u8033\u4ed6",
+                "\u7ea6\u65e6",
+                "\u5723\u9a6c\u529b\u8bfa",
+                "\u51e0\u5185\u4e9a",
+                "\u5409\u5e03\u63d0",
+                "\u73bb\u5229\u7ef4\u4e9a",
+                "\u5c3c\u65e5\u5229\u4e9a",
+                "\u6bdb\u91cc\u6c42\u65af",
+                "\u6ce2\u591a\u9ece\u5404",
+                "\u585e\u5185\u52a0\u5c14",
+                "\u683c\u9c81\u5409\u4e9a",
+                "\u9ed1\u5c71",
+                "\u8d8a\u5357",
+                "\u521a\u679c\uff08\u91d1\uff09",
+                "\u65af\u91cc\u5170\u5361",
+                "\u80af\u5c3c\u4e9a",
+                "\u59d4\u5185\u745e\u62c9",
+                "\u5371\u5730\u9a6c\u62c9",
+                "\u5df4\u52d2\u65af\u5766",
+                "\u5df4\u62c9\u572d",
+                "\u8428\u5c14\u74e6\u591a",
+                "\u6587\u83b1",
+                "\u5362\u65fa\u8fbe",
+                "\u9a6c\u91cc",
+                "\u67ec\u57d4\u5be8",
+                "\u7279\u7acb\u5c3c\u8fbe\u548c\u591a\u5df4\u54e5",
+                "\u9a6c\u8fbe\u52a0\u65af\u52a0",
+                "\u6469\u7eb3\u54e5",
+                "\u57c3\u585e\u4fc4\u6bd4\u4e9a",
+                "\u5217\u652f\u6566\u58eb\u767b\u516c\u56fd",
+                "\u591a\u54e5",
+                "\u7259\u4e70\u52a0",
+                "\u5df4\u5df4\u591a\u65af",
+                "\u7f05\u7538",
+                "\u521a\u679c\uff08\u5e03\uff09",
+                "\u7d22\u9a6c\u91cc",
+                "\u5229\u6bd4\u91cc\u4e9a",
+                "\u52a0\u84ec",
+                "\u4e4c\u5e72\u8fbe",
+                "\u5df4\u54c8\u9a6c",
+                "\u5766\u6851\u5c3c\u4e9a",
+                "\u572d\u4e9a\u90a3",
+                "\u8d5e\u6bd4\u4e9a",
+                "\u6d77\u5730",
+                "\u51e0\u5185\u4e9a\u6bd4\u7ecd",
+                "\u9a6c\u63d0\u5c3c\u514b\u5c9b",
+                "\u8d1d\u5b81",
+                "\u5384\u7acb\u7279\u91cc\u4e9a",
+                "\u8499\u53e4",
+                "\u82cf\u4e39",
+                "\u5229\u6bd4\u4e9a",
+                "\u53d9\u5229\u4e9a",
+                "\u5b89\u63d0\u74dc\u548c\u5df4\u5e03\u8fbe",
+                "\u4e4d\u5f97",
+                "\u8d64\u9053\u51e0\u5185\u4e9a",
+                "\u83ab\u6851\u6bd4\u514b",
+                "\u9a6c\u5c14\u4ee3\u592b",
+                "\u8001\u631d",
+                "\u5b89\u54e5\u62c9",
+                "\u4f2f\u5229\u5179",
+                "\u6d25\u5df4\u5e03\u97e6",
+                "\u591a\u7c73\u5c3c\u514b",
+                "\u7eb3\u7c73\u6bd4\u4e9a",
+                "\u5c3c\u6cca\u5c14",
+                "\u9a6c\u62c9\u7ef4",
+                "\u6590\u6d4e",
+                "\u65af\u5a01\u58eb\u5170",
+                "\u5723\u5362\u897f\u4e9a",
+                "\u683c\u6797\u7eb3\u8fbe",
+                "\u535a\u8328\u74e6\u7eb3",
+                "\u5723\u57fa\u8328\u548c\u5c3c\u7ef4\u65af",
+                "\u5723\u6587\u68ee\u7279\u548c\u683c\u6797\u7eb3\u4e01\u65af",
+                "\u585e\u62c9\u5229\u6602",
+                "\u4e2d\u975e\u5171\u548c\u56fd",
+                "\u585e\u820c\u5c14",
+                "\u82cf\u91cc\u5357",
+                "\u4f5b\u5f97\u89d2",
+                "\u5c3c\u52a0\u62c9\u74dc",
+                "\u5188\u6bd4\u4e9a",
+                "\u68b5\u8482\u5188",
+                "\u6bdb\u91cc\u5854\u5c3c\u4e9a",
+                "\u4e1c\u5e1d\u6c76",
+                "\u5e03\u9686\u8fea",
+                "\u4e0d\u4e39",
+                "\u5df4\u5e03\u4e9a\u65b0\u51e0\u5185\u4e9a",
+                "\u4e5f\u95e8"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "axisTick": {
+                "show": true,
+                "alignWithLabel": false,
+                "inside": false
+            },
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        },
+        {
+            "type": "value",
+            "name": "\u4eba\u6570/\u4eba",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "position": "left",
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "\u56fd\u5916\u75ab\u60c5\u6570\u636e",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "dataZoom": {
+        "show": true,
+        "type": "slider",
+        "realtime": true,
+        "start": 30,
+        "end": 90,
+        "orient": "horizontal",
+        "zoomLock": false
+    }
+};
+        chart_0b0bdc0680c44bfb8ad35705192ea164.setOption(option_0b0bdc0680c44bfb8ad35705192ea164);
+    </script>
+                <div id="bed1adba18d5450a843e5e518b34297b" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_bed1adba18d5450a843e5e518b34297b = echarts.init(
+            document.getElementById('bed1adba18d5450a843e5e518b34297b'), 'roma', {renderer: 'canvas'});
+        var option_bed1adba18d5450a843e5e518b34297b = {
+    "backgroundColor": "#eee",
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "series": [
+        {
+            "type": "map",
+            "name": "\u786e\u8bca\u75c5\u4f8b",
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "mapType": "world",
+            "data": [
+                {
+                    "name": "\u7f8e\u56fd",
+                    "value": 583220
+                },
+                {
+                    "name": "\u897f\u73ed\u7259",
+                    "value": 172541
+                },
+                {
+                    "name": "\u610f\u5927\u5229",
+                    "value": 159516
+                },
+                {
+                    "name": "\u6cd5\u56fd",
+                    "value": 137887
+                },
+                {
+                    "name": "\u5fb7\u56fd",
+                    "value": 130434
+                },
+                {
+                    "name": "\u82f1\u56fd",
+                    "value": 89569
+                },
+                {
+                    "name": "\u4f0a\u6717",
+                    "value": 74877
+                },
+                {
+                    "name": "\u571f\u8033\u5176",
+                    "value": 61049
+                },
+                {
+                    "name": "\u6bd4\u5229\u65f6",
+                    "value": 31119
+                },
+                {
+                    "name": "\u8377\u5170",
+                    "value": 27580
+                },
+                {
+                    "name": "\u745e\u58eb",
+                    "value": 25913
+                },
+                {
+                    "name": "\u52a0\u62ff\u5927",
+                    "value": 25680
+                },
+                {
+                    "name": "\u5df4\u897f",
+                    "value": 23955
+                },
+                {
+                    "name": "\u4fc4\u7f57\u65af",
+                    "value": 21102
+                },
+                {
+                    "name": "\u8461\u8404\u7259",
+                    "value": 17448
+                },
+                {
+                    "name": "\u5965\u5730\u5229",
+                    "value": 14159
+                },
+                {
+                    "name": "\u4ee5\u8272\u5217",
+                    "value": 11868
+                },
+                {
+                    "name": "\u745e\u5178",
+                    "value": 11445
+                },
+                {
+                    "name": "\u7231\u5c14\u5170",
+                    "value": 10647
+                },
+                {
+                    "name": "\u97e9\u56fd",
+                    "value": 10564
+                },
+                {
+                    "name": "\u5370\u5ea6",
+                    "value": 10541
+                },
+                {
+                    "name": "\u79d8\u9c81",
+                    "value": 9784
+                },
+                {
+                    "name": "\u65e5\u672c\u672c\u571f",
+                    "value": 7645
+                },
+                {
+                    "name": "\u5384\u74dc\u591a\u5c14",
+                    "value": 7529
+                },
+                {
+                    "name": "\u667a\u5229",
+                    "value": 7525
+                },
+                {
+                    "name": "\u6ce2\u5170",
+                    "value": 7049
+                },
+                {
+                    "name": "\u7f57\u9a6c\u5c3c\u4e9a",
+                    "value": 6879
+                },
+                {
+                    "name": "\u4e39\u9ea6",
+                    "value": 6691
+                },
+                {
+                    "name": "\u632a\u5a01",
+                    "value": 6623
+                },
+                {
+                    "name": "\u6fb3\u5927\u5229\u4e9a",
+                    "value": 6494
+                },
+                {
+                    "name": "\u6377\u514b",
+                    "value": 6059
+                },
+                {
+                    "name": "\u5df4\u57fa\u65af\u5766",
+                    "value": 5837
+                },
+                {
+                    "name": "\u6c99\u7279\u963f\u62c9\u4f2f",
+                    "value": 5369
+                },
+                {
+                    "name": "\u83f2\u5f8b\u5bbe",
+                    "value": 5223
+                },
+                {
+                    "name": "\u58a8\u897f\u54e5",
+                    "value": 5014
+                },
+                {
+                    "name": "\u9a6c\u6765\u897f\u4e9a",
+                    "value": 4987
+                },
+                {
+                    "name": "\u5370\u5ea6\u5c3c\u897f\u4e9a",
+                    "value": 4839
+                },
+                {
+                    "name": "\u963f\u8054\u914b",
+                    "value": 4521
+                },
+                {
+                    "name": "\u585e\u5c14\u7ef4\u4e9a",
+                    "value": 4054
+                },
+                {
+                    "name": "\u5df4\u62ff\u9a6c",
+                    "value": 3472
+                },
+                {
+                    "name": "\u5361\u5854\u5c14",
+                    "value": 3428
+                },
+                {
+                    "name": "\u4e4c\u514b\u5170",
+                    "value": 3372
+                },
+                {
+                    "name": "\u5362\u68ee\u5821",
+                    "value": 3292
+                },
+                {
+                    "name": "\u767d\u4fc4\u7f57\u65af",
+                    "value": 3281
+                },
+                {
+                    "name": "\u65b0\u52a0\u5761",
+                    "value": 3252
+                },
+                {
+                    "name": "\u591a\u7c73\u5c3c\u52a0",
+                    "value": 3167
+                },
+                {
+                    "name": "\u82ac\u5170",
+                    "value": 3161
+                },
+                {
+                    "name": "\u54e5\u4f26\u6bd4\u4e9a",
+                    "value": 2852
+                },
+                {
+                    "name": "\u6cf0\u56fd",
+                    "value": 2613
+                },
+                {
+                    "name": "\u5357\u975e",
+                    "value": 2415
+                },
+                {
+                    "name": "\u963f\u6839\u5ef7",
+                    "value": 2277
+                },
+                {
+                    "name": "\u57c3\u53ca",
+                    "value": 2190
+                },
+                {
+                    "name": "\u5e0c\u814a",
+                    "value": 2145
+                },
+                {
+                    "name": "\u963f\u5c14\u53ca\u5229\u4e9a",
+                    "value": 1983
+                },
+                {
+                    "name": "\u6469\u5c14\u591a\u74e6",
+                    "value": 1847
+                },
+                {
+                    "name": "\u6469\u6d1b\u54e5",
+                    "value": 1838
+                },
+                {
+                    "name": "\u51b0\u5c9b",
+                    "value": 1711
+                },
+                {
+                    "name": "\u514b\u7f57\u5730\u4e9a",
+                    "value": 1704
+                },
+                {
+                    "name": "\u5df4\u6797",
+                    "value": 1522
+                },
+                {
+                    "name": "\u5308\u7259\u5229",
+                    "value": 1512
+                },
+                {
+                    "name": "\u4f0a\u62c9\u514b",
+                    "value": 1378
+                },
+                {
+                    "name": "\u7231\u6c99\u5c3c\u4e9a",
+                    "value": 1373
+                },
+                {
+                    "name": "\u65b0\u897f\u5170",
+                    "value": 1366
+                },
+                {
+                    "name": "\u79d1\u5a01\u7279",
+                    "value": 1355
+                },
+                {
+                    "name": "\u65af\u6d1b\u6587\u5c3c\u4e9a",
+                    "value": 1220
+                },
+                {
+                    "name": "\u54c8\u8428\u514b\u65af\u5766",
+                    "value": 1202
+                },
+                {
+                    "name": "\u963f\u585e\u62dc\u7586",
+                    "value": 1197
+                },
+                {
+                    "name": "\u4e4c\u5179\u522b\u514b\u65af\u5766",
+                    "value": 1113
+                },
+                {
+                    "name": "\u6ce2\u9ed1",
+                    "value": 1083
+                },
+                {
+                    "name": "\u7acb\u9676\u5b9b",
+                    "value": 1070
+                },
+                {
+                    "name": "\u4e9a\u7f8e\u5c3c\u4e9a",
+                    "value": 1067
+                },
+                {
+                    "name": "\u5b5f\u52a0\u62c9",
+                    "value": 1012
+                },
+                {
+                    "name": "\u5317\u9a6c\u5176\u987f",
+                    "value": 908
+                },
+                {
+                    "name": "\u5580\u9ea6\u9686",
+                    "value": 848
+                },
+                {
+                    "name": "\u65af\u6d1b\u4f10\u514b",
+                    "value": 835
+                },
+                {
+                    "name": "\u963f\u66fc",
+                    "value": 813
+                },
+                {
+                    "name": "\u53e4\u5df4",
+                    "value": 726
+                },
+                {
+                    "name": "\u7a81\u5c3c\u65af",
+                    "value": 726
+                },
+                {
+                    "name": "\u963f\u5bcc\u6c57",
+                    "value": 714
+                },
+                {
+                    "name": "\u4fdd\u52a0\u5229\u4e9a",
+                    "value": 713
+                },
+                {
+                    "name": "\u94bb\u77f3\u53f7\u90ae\u8f6e",
+                    "value": 712
+                },
+                {
+                    "name": "\u585e\u6d66\u8def\u65af",
+                    "value": 662
+                },
+                {
+                    "name": "\u62c9\u8131\u7ef4\u4e9a",
+                    "value": 657
+                },
+                {
+                    "name": "\u5b89\u9053\u5c14",
+                    "value": 646
+                },
+                {
+                    "name": "\u9ece\u5df4\u5ae9",
+                    "value": 641
+                },
+                {
+                    "name": "\u79d1\u7279\u8fea\u74e6",
+                    "value": 626
+                },
+                {
+                    "name": "\u54e5\u65af\u8fbe\u9ece\u52a0",
+                    "value": 612
+                },
+                {
+                    "name": "\u52a0\u7eb3",
+                    "value": 566
+                },
+                {
+                    "name": "\u5c3c\u65e5\u5c14",
+                    "value": 548
+                },
+                {
+                    "name": "\u5e03\u57fa\u7eb3\u6cd5\u7d22",
+                    "value": 515
+                },
+                {
+                    "name": "\u4e4c\u62c9\u572d",
+                    "value": 483
+                },
+                {
+                    "name": "\u963f\u5c14\u5df4\u5c3c\u4e9a",
+                    "value": 475
+                },
+                {
+                    "name": "\u5409\u5c14\u5409\u65af\u65af\u5766",
+                    "value": 430
+                },
+                {
+                    "name": "\u6d2a\u90fd\u62c9\u65af",
+                    "value": 407
+                },
+                {
+                    "name": "\u9a6c\u8033\u4ed6",
+                    "value": 393
+                },
+                {
+                    "name": "\u7ea6\u65e6",
+                    "value": 391
+                },
+                {
+                    "name": "\u5723\u9a6c\u529b\u8bfa",
+                    "value": 371
+                },
+                {
+                    "name": "\u51e0\u5185\u4e9a",
+                    "value": 363
+                },
+                {
+                    "name": "\u5409\u5e03\u63d0",
+                    "value": 363
+                },
+                {
+                    "name": "\u73bb\u5229\u7ef4\u4e9a",
+                    "value": 354
+                },
+                {
+                    "name": "\u5c3c\u65e5\u5229\u4e9a",
+                    "value": 343
+                },
+                {
+                    "name": "\u6bdb\u91cc\u6c42\u65af",
+                    "value": 324
+                },
+                {
+                    "name": "\u6ce2\u591a\u9ece\u5404",
+                    "value": 316
+                },
+                {
+                    "name": "\u585e\u5185\u52a0\u5c14",
+                    "value": 299
+                },
+                {
+                    "name": "\u683c\u9c81\u5409\u4e9a",
+                    "value": 296
+                },
+                {
+                    "name": "\u9ed1\u5c71",
+                    "value": 278
+                },
+                {
+                    "name": "\u8d8a\u5357",
+                    "value": 266
+                },
+                {
+                    "name": "\u521a\u679c\uff08\u91d1\uff09",
+                    "value": 241
+                },
+                {
+                    "name": "\u65af\u91cc\u5170\u5361",
+                    "value": 219
+                },
+                {
+                    "name": "\u80af\u5c3c\u4e9a",
+                    "value": 208
+                },
+                {
+                    "name": "\u59d4\u5185\u745e\u62c9",
+                    "value": 189
+                },
+                {
+                    "name": "\u5371\u5730\u9a6c\u62c9",
+                    "value": 167
+                },
+                {
+                    "name": "\u5df4\u52d2\u65af\u5766",
+                    "value": 161
+                },
+                {
+                    "name": "\u5df4\u62c9\u572d",
+                    "value": 159
+                },
+                {
+                    "name": "\u8428\u5c14\u74e6\u591a",
+                    "value": 149
+                },
+                {
+                    "name": "\u6587\u83b1",
+                    "value": 136
+                },
+                {
+                    "name": "\u5362\u65fa\u8fbe",
+                    "value": 127
+                },
+                {
+                    "name": "\u9a6c\u91cc",
+                    "value": 123
+                },
+                {
+                    "name": "\u67ec\u57d4\u5be8",
+                    "value": 122
+                },
+                {
+                    "name": "\u7279\u7acb\u5c3c\u8fbe\u548c\u591a\u5df4\u54e5",
+                    "value": 113
+                },
+                {
+                    "name": "\u9a6c\u8fbe\u52a0\u65af\u52a0",
+                    "value": 108
+                },
+                {
+                    "name": "\u6469\u7eb3\u54e5",
+                    "value": 93
+                },
+                {
+                    "name": "\u57c3\u585e\u4fc4\u6bd4\u4e9a",
+                    "value": 82
+                },
+                {
+                    "name": "\u5217\u652f\u6566\u58eb\u767b\u516c\u56fd",
+                    "value": 79
+                },
+                {
+                    "name": "\u591a\u54e5",
+                    "value": 77
+                },
+                {
+                    "name": "\u7259\u4e70\u52a0",
+                    "value": 73
+                },
+                {
+                    "name": "\u5df4\u5df4\u591a\u65af",
+                    "value": 72
+                },
+                {
+                    "name": "\u7f05\u7538",
+                    "value": 62
+                },
+                {
+                    "name": "\u521a\u679c\uff08\u5e03\uff09",
+                    "value": 60
+                },
+                {
+                    "name": "\u7d22\u9a6c\u91cc",
+                    "value": 60
+                },
+                {
+                    "name": "\u5229\u6bd4\u91cc\u4e9a",
+                    "value": 59
+                },
+                {
+                    "name": "\u52a0\u84ec",
+                    "value": 57
+                },
+                {
+                    "name": "\u4e4c\u5e72\u8fbe",
+                    "value": 54
+                },
+                {
+                    "name": "\u5df4\u54c8\u9a6c",
+                    "value": 49
+                },
+                {
+                    "name": "\u5766\u6851\u5c3c\u4e9a",
+                    "value": 49
+                },
+                {
+                    "name": "\u572d\u4e9a\u90a3",
+                    "value": 47
+                },
+                {
+                    "name": "\u8d5e\u6bd4\u4e9a",
+                    "value": 45
+                },
+                {
+                    "name": "\u6d77\u5730",
+                    "value": 40
+                },
+                {
+                    "name": "\u51e0\u5185\u4e9a\u6bd4\u7ecd",
+                    "value": 38
+                },
+                {
+                    "name": "\u9a6c\u63d0\u5c3c\u514b\u5c9b",
+                    "value": 37
+                },
+                {
+                    "name": "\u8d1d\u5b81",
+                    "value": 35
+                },
+                {
+                    "name": "\u5384\u7acb\u7279\u91cc\u4e9a",
+                    "value": 34
+                },
+                {
+                    "name": "\u8499\u53e4",
+                    "value": 30
+                },
+                {
+                    "name": "\u82cf\u4e39",
+                    "value": 29
+                },
+                {
+                    "name": "\u5229\u6bd4\u4e9a",
+                    "value": 26
+                },
+                {
+                    "name": "\u53d9\u5229\u4e9a",
+                    "value": 25
+                },
+                {
+                    "name": "\u5b89\u63d0\u74dc\u548c\u5df4\u5e03\u8fbe",
+                    "value": 23
+                },
+                {
+                    "name": "\u4e4d\u5f97",
+                    "value": 23
+                },
+                {
+                    "name": "\u8d64\u9053\u51e0\u5185\u4e9a",
+                    "value": 21
+                },
+                {
+                    "name": "\u83ab\u6851\u6bd4\u514b",
+                    "value": 21
+                },
+                {
+                    "name": "\u9a6c\u5c14\u4ee3\u592b",
+                    "value": 20
+                },
+                {
+                    "name": "\u8001\u631d",
+                    "value": 19
+                },
+                {
+                    "name": "\u5b89\u54e5\u62c9",
+                    "value": 19
+                },
+                {
+                    "name": "\u4f2f\u5229\u5179",
+                    "value": 18
+                },
+                {
+                    "name": "\u6d25\u5df4\u5e03\u97e6",
+                    "value": 17
+                },
+                {
+                    "name": "\u591a\u7c73\u5c3c\u514b",
+                    "value": 16
+                },
+                {
+                    "name": "\u7eb3\u7c73\u6bd4\u4e9a",
+                    "value": 16
+                },
+                {
+                    "name": "\u5c3c\u6cca\u5c14",
+                    "value": 16
+                },
+                {
+                    "name": "\u9a6c\u62c9\u7ef4",
+                    "value": 16
+                },
+                {
+                    "name": "\u6590\u6d4e",
+                    "value": 16
+                },
+                {
+                    "name": "\u65af\u5a01\u58eb\u5170",
+                    "value": 15
+                },
+                {
+                    "name": "\u5723\u5362\u897f\u4e9a",
+                    "value": 15
+                },
+                {
+                    "name": "\u683c\u6797\u7eb3\u8fbe",
+                    "value": 14
+                },
+                {
+                    "name": "\u535a\u8328\u74e6\u7eb3",
+                    "value": 13
+                },
+                {
+                    "name": "\u5723\u57fa\u8328\u548c\u5c3c\u7ef4\u65af",
+                    "value": 12
+                },
+                {
+                    "name": "\u5723\u6587\u68ee\u7279\u548c\u683c\u6797\u7eb3\u4e01\u65af",
+                    "value": 12
+                },
+                {
+                    "name": "\u585e\u62c9\u5229\u6602",
+                    "value": 11
+                },
+                {
+                    "name": "\u4e2d\u975e\u5171\u548c\u56fd",
+                    "value": 11
+                },
+                {
+                    "name": "\u585e\u820c\u5c14",
+                    "value": 11
+                },
+                {
+                    "name": "\u82cf\u91cc\u5357",
+                    "value": 10
+                },
+                {
+                    "name": "\u4f5b\u5f97\u89d2",
+                    "value": 10
+                },
+                {
+                    "name": "\u5c3c\u52a0\u62c9\u74dc",
+                    "value": 9
+                },
+                {
+                    "name": "\u5188\u6bd4\u4e9a",
+                    "value": 9
+                },
+                {
+                    "name": "\u68b5\u8482\u5188",
+                    "value": 8
+                },
+                {
+                    "name": "\u6bdb\u91cc\u5854\u5c3c\u4e9a",
+                    "value": 7
+                },
+                {
+                    "name": "\u4e1c\u5e1d\u6c76",
+                    "value": 6
+                },
+                {
+                    "name": "\u5e03\u9686\u8fea",
+                    "value": 5
+                },
+                {
+                    "name": "\u4e0d\u4e39",
+                    "value": 5
+                },
+                {
+                    "name": "\u5df4\u5e03\u4e9a\u65b0\u51e0\u5185\u4e9a",
+                    "value": 2
+                },
+                {
+                    "name": "\u4e5f\u95e8",
+                    "value": 1
+                }
+            ],
+            "roam": true,
+            "zoom": 1,
+            "nameMap": {
+                "Singapore Rep.": "\u65b0\u52a0\u5761",
+                "Dominican Rep.": "\u591a\u7c73\u5c3c\u52a0",
+                "Palestine": "\u5df4\u52d2\u65af\u5766",
+                "Bahamas": "\u5df4\u54c8\u9a6c",
+                "Timor-Leste": "\u4e1c\u5e1d\u6c76",
+                "Afghanistan": "\u963f\u5bcc\u6c57",
+                "Guinea-Bissau": "\u51e0\u5185\u4e9a\u6bd4\u7ecd",
+                "C\u00f4te d'Ivoire": "\u79d1\u7279\u8fea\u74e6",
+                "Siachen Glacier": "\u9521\u4e9a\u7434\u51b0\u5ddd",
+                "Br. Indian Ocean Ter.": "\u82f1\u5c5e\u5370\u5ea6\u6d0b\u9886\u571f",
+                "Angola": "\u5b89\u54e5\u62c9",
+                "Albania": "\u963f\u5c14\u5df4\u5c3c\u4e9a",
+                "United Arab Emirates": "\u963f\u8054\u914b",
+                "Argentina": "\u963f\u6839\u5ef7",
+                "Armenia": "\u4e9a\u7f8e\u5c3c\u4e9a",
+                "French Southern and Antarctic Lands": "\u6cd5\u5c5e\u5357\u534a\u7403\u548c\u5357\u6781\u9886\u5730",
+                "Australia": "\u6fb3\u5927\u5229\u4e9a",
+                "Austria": "\u5965\u5730\u5229",
+                "Azerbaijan": "\u963f\u585e\u62dc\u7586",
+                "Burundi": "\u5e03\u9686\u8fea",
+                "Belgium": "\u6bd4\u5229\u65f6",
+                "Benin": "\u8d1d\u5b81",
+                "Burkina Faso": "\u5e03\u57fa\u7eb3\u6cd5\u7d22",
+                "Bangladesh": "\u5b5f\u52a0\u62c9\u56fd",
+                "Bulgaria": "\u4fdd\u52a0\u5229\u4e9a",
+                "The Bahamas": "\u5df4\u54c8\u9a6c",
+                "Bosnia and Herz.": "\u6ce2\u65af\u5c3c\u4e9a\u548c\u9ed1\u585e\u54e5\u7ef4\u90a3",
+                "Belarus": "\u767d\u4fc4\u7f57\u65af",
+                "Belize": "\u4f2f\u5229\u5179",
+                "Bermuda": "\u767e\u6155\u5927",
+                "Bolivia": "\u73bb\u5229\u7ef4\u4e9a",
+                "Brazil": "\u5df4\u897f",
+                "Brunei": "\u6587\u83b1",
+                "Bhutan": "\u4e0d\u4e39",
+                "Botswana": "\u535a\u8328\u74e6\u7eb3",
+                "Central African Rep.": "\u4e2d\u975e\u5171\u548c\u56fd",
+                "Canada": "\u52a0\u62ff\u5927",
+                "Switzerland": "\u745e\u58eb",
+                "Chile": "\u667a\u5229",
+                "China": "\u4e2d\u56fd",
+                "Ivory Coast": "\u8c61\u7259\u6d77\u5cb8",
+                "Cameroon": "\u5580\u9ea6\u9686",
+                "Dem. Rep. Congo": "\u521a\u679c\uff08\u91d1\uff09",
+                "Congo": "\u521a\u679c\uff08\u5e03\uff09",
+                "Colombia": "\u54e5\u4f26\u6bd4\u4e9a",
+                "Costa Rica": "\u54e5\u65af\u8fbe\u9ece\u52a0",
+                "Cuba": "\u53e4\u5df4",
+                "N. Cyprus": "\u5317\u585e\u6d66\u8def\u65af",
+                "Cyprus": "\u585e\u6d66\u8def\u65af",
+                "Czech Rep.": "\u6377\u514b",
+                "Germany": "\u5fb7\u56fd",
+                "Djibouti": "\u5409\u5e03\u63d0",
+                "Denmark": "\u4e39\u9ea6",
+                "Algeria": "\u963f\u5c14\u53ca\u5229\u4e9a",
+                "Ecuador": "\u5384\u74dc\u591a\u5c14",
+                "Egypt": "\u57c3\u53ca",
+                "Eritrea": "\u5384\u7acb\u7279\u91cc\u4e9a",
+                "Spain": "\u897f\u73ed\u7259",
+                "Estonia": "\u7231\u6c99\u5c3c\u4e9a",
+                "Ethiopia": "\u57c3\u585e\u4fc4\u6bd4\u4e9a",
+                "Finland": "\u82ac\u5170",
+                "Fiji": "\u6590",
+                "Falkland Islands": "\u798f\u514b\u5170\u7fa4\u5c9b",
+                "France": "\u6cd5\u56fd",
+                "Gabon": "\u52a0\u84ec",
+                "United Kingdom": "\u82f1\u56fd",
+                "Georgia": "\u683c\u9c81\u5409\u4e9a",
+                "Ghana": "\u52a0\u7eb3",
+                "Guinea": "\u51e0\u5185\u4e9a",
+                "Gambia": "\u5188\u6bd4\u4e9a",
+                "Guinea Bissau": "\u51e0\u5185\u4e9a\u6bd4\u7ecd",
+                "Eq. Guinea": "\u8d64\u9053\u51e0\u5185\u4e9a",
+                "Greece": "\u5e0c\u814a",
+                "Greenland": "\u683c\u9675\u5170",
+                "Guatemala": "\u5371\u5730\u9a6c\u62c9",
+                "French Guiana": "\u6cd5\u5c5e\u572d\u4e9a\u90a3",
+                "Guyana": "\u572d\u4e9a\u90a3",
+                "Honduras": "\u6d2a\u90fd\u62c9\u65af",
+                "Croatia": "\u514b\u7f57\u5730\u4e9a",
+                "Haiti": "\u6d77\u5730",
+                "Hungary": "\u5308\u7259\u5229",
+                "Indonesia": "\u5370\u5ea6\u5c3c\u897f\u4e9a",
+                "India": "\u5370\u5ea6",
+                "Ireland": "\u7231\u5c14\u5170",
+                "Iran": "\u4f0a\u6717",
+                "Iraq": "\u4f0a\u62c9\u514b",
+                "Iceland": "\u51b0\u5c9b",
+                "Israel": "\u4ee5\u8272\u5217",
+                "Italy": "\u610f\u5927\u5229",
+                "Jamaica": "\u7259\u4e70\u52a0",
+                "Jordan": "\u7ea6\u65e6",
+                "Japan": "\u65e5\u672c\u672c\u571f",
+                "Kazakhstan": "\u54c8\u8428\u514b\u65af\u5766",
+                "Kenya": "\u80af\u5c3c\u4e9a",
+                "Kyrgyzstan": "\u5409\u5c14\u5409\u65af\u65af\u5766",
+                "Cambodia": "\u67ec\u57d4\u5be8",
+                "Korea": "\u97e9\u56fd",
+                "Kosovo": "\u79d1\u7d22\u6c83",
+                "Kuwait": "\u79d1\u5a01\u7279",
+                "Lao PDR": "\u8001\u631d",
+                "Lebanon": "\u9ece\u5df4\u5ae9",
+                "Liberia": "\u5229\u6bd4\u91cc\u4e9a",
+                "Libya": "\u5229\u6bd4\u4e9a",
+                "Sri Lanka": "\u65af\u91cc\u5170\u5361",
+                "Lesotho": "\u83b1\u7d22\u6258",
+                "Lithuania": "\u7acb\u9676\u5b9b",
+                "Luxembourg": "\u5362\u68ee\u5821",
+                "Latvia": "\u62c9\u8131\u7ef4\u4e9a",
+                "Morocco": "\u6469\u6d1b\u54e5",
+                "Moldova": "\u6469\u5c14\u591a\u74e6",
+                "Madagascar": "\u9a6c\u8fbe\u52a0\u65af\u52a0",
+                "Mexico": "\u58a8\u897f\u54e5",
+                "Macedonia": "\u9a6c\u5176\u987f",
+                "Mali": "\u9a6c\u91cc",
+                "Myanmar": "\u7f05\u7538",
+                "Montenegro": "\u9ed1\u5c71",
+                "Mongolia": "\u8499\u53e4",
+                "Mozambique": "\u83ab\u6851\u6bd4\u514b",
+                "Mauritania": "\u6bdb\u91cc\u5854\u5c3c\u4e9a",
+                "Malawi": "\u9a6c\u62c9\u7ef4",
+                "Malaysia": "\u9a6c\u6765\u897f\u4e9a",
+                "Namibia": "\u7eb3\u7c73\u6bd4\u4e9a",
+                "New Caledonia": "\u65b0\u5580\u91cc\u591a\u5c3c\u4e9a",
+                "Niger": "\u5c3c\u65e5\u5c14",
+                "Nigeria": "\u5c3c\u65e5\u5229\u4e9a",
+                "Nicaragua": "\u5c3c\u52a0\u62c9\u74dc",
+                "Netherlands": "\u8377\u5170",
+                "Norway": "\u632a\u5a01",
+                "Nepal": "\u5c3c\u6cca\u5c14",
+                "New Zealand": "\u65b0\u897f\u5170",
+                "Oman": "\u963f\u66fc",
+                "Pakistan": "\u5df4\u57fa\u65af\u5766",
+                "Panama": "\u5df4\u62ff\u9a6c",
+                "Peru": "\u79d8\u9c81",
+                "Philippines": "\u83f2\u5f8b\u5bbe",
+                "Papua New Guinea": "\u5df4\u5e03\u4e9a\u65b0\u51e0\u5185\u4e9a",
+                "Poland": "\u6ce2\u5170",
+                "Puerto Rico": "\u6ce2\u591a\u9ece\u5404",
+                "Dem. Rep. Korea": "\u671d\u9c9c",
+                "Portugal": "\u8461\u8404\u7259",
+                "Paraguay": "\u5df4\u62c9\u572d",
+                "Qatar": "\u5361\u5854\u5c14",
+                "Romania": "\u7f57\u9a6c\u5c3c\u4e9a",
+                "Russia": "\u4fc4\u7f57\u65af",
+                "Rwanda": "\u5362\u65fa\u8fbe",
+                "W. Sahara": "\u897f\u6492\u54c8\u62c9",
+                "Saudi Arabia": "\u6c99\u7279\u963f\u62c9\u4f2f",
+                "Sudan": "\u82cf\u4e39",
+                "S. Sudan": "\u5357\u82cf\u4e39",
+                "Senegal": "\u585e\u5185\u52a0\u5c14",
+                "Solomon Is.": "\u6240\u7f57\u95e8\u7fa4\u5c9b",
+                "Sierra Leone": "\u585e\u62c9\u5229\u6602",
+                "El Salvador": "\u8428\u5c14\u74e6\u591a",
+                "Somaliland": "\u7d22\u9a6c\u91cc\u5170",
+                "Somalia": "\u7d22\u9a6c\u91cc",
+                "Serbia": "\u585e\u5c14\u7ef4\u4e9a",
+                "Suriname": "\u82cf\u91cc\u5357",
+                "Slovakia": "\u65af\u6d1b\u4f10\u514b",
+                "Slovenia": "\u65af\u6d1b\u6587\u5c3c\u4e9a",
+                "Sweden": "\u745e\u5178",
+                "Swaziland": "\u65af\u5a01\u58eb\u5170",
+                "Syria": "\u53d9\u5229\u4e9a",
+                "Chad": "\u4e4d\u5f97",
+                "Togo": "\u591a\u54e5",
+                "Thailand": "\u6cf0\u56fd",
+                "Tajikistan": "\u5854\u5409\u514b\u65af\u5766",
+                "Turkmenistan": "\u571f\u5e93\u66fc\u65af\u5766",
+                "East Timor": "\u4e1c\u5e1d\u6c76",
+                "Trinidad and Tobago": "\u7279\u91cc\u5c3c\u8fbe\u548c\u591a\u5df4\u54e5",
+                "Tunisia": "\u7a81\u5c3c\u65af",
+                "Turkey": "\u571f\u8033\u5176",
+                "Tanzania": "\u5766\u6851\u5c3c\u4e9a",
+                "Uganda": "\u4e4c\u5e72\u8fbe",
+                "Ukraine": "\u4e4c\u514b\u5170",
+                "Uruguay": "\u4e4c\u62c9\u572d",
+                "United States": "\u7f8e\u56fd",
+                "Uzbekistan": "\u4e4c\u5179\u522b\u514b\u65af\u5766",
+                "Venezuela": "\u59d4\u5185\u745e\u62c9",
+                "Vietnam": "\u8d8a\u5357",
+                "Vanuatu": "\u74e6\u52aa\u963f\u56fe",
+                "West Bank": "\u897f\u5cb8",
+                "Yemen": "\u4e5f\u95e8",
+                "South Africa": "\u5357\u975e",
+                "Zambia": "\u8d5e\u6bd4\u4e9a",
+                "Zimbabwe": "\u6d25\u5df4\u5e03\u97e6"
+            },
+            "showLegendSymbol": false,
+            "emphasis": {},
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            },
+            "textStyle_opts": {
+                "fontSize": 12
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u786e\u8bca\u75c5\u4f8b"
+            ],
+            "selected": {
+                "\u786e\u8bca\u75c5\u4f8b": true
+            },
+            "show": false,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "title": [
+        {
+            "text": "\u56fd\u5916\u7d2f\u8ba1\u786e\u8bca\u75c5\u4f8b",
+            "left": "center",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "piecewise",
+        "min": 0,
+        "max": 100,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "orient": "vertical",
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 14,
+        "borderWidth": 0,
+        "pieces": [
+            {
+                "min": 200000,
+                "label": ">=200000\u4eba",
+                "color": "#300000"
+            },
+            {
+                "min": 100000,
+                "max": 199999,
+                "label": "100000-199999\u4eba",
+                "color": "#580000"
+            },
+            {
+                "min": 10000,
+                "max": 99999,
+                "label": "10000-99999\u4eba",
+                "color": "#880000"
+            },
+            {
+                "min": 5000,
+                "max": 9999,
+                "label": "5000-9999\u4eba",
+                "color": "#F80000"
+            },
+            {
+                "min": 1000,
+                "max": 4999,
+                "label": "1000-4999\u4eba",
+                "color": "#FF6633"
+            },
+            {
+                "min": 100,
+                "max": 999,
+                "label": "100-999\u4eba",
+                "color": "#FF9966"
+            },
+            {
+                "min": 1,
+                "max": 99,
+                "label": "1-99\u4eba",
+                "color": "#FFCC00"
+            }
+        ]
+    }
+};
+        chart_bed1adba18d5450a843e5e518b34297b.setOption(option_bed1adba18d5450a843e5e518b34297b);
+    </script>
+                <div id="9e1f1ff0febb4e28835047efb3abfe44" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_9e1f1ff0febb4e28835047efb3abfe44 = echarts.init(
+            document.getElementById('9e1f1ff0febb4e28835047efb3abfe44'), 'white', {renderer: 'canvas'});
+        var option_9e1f1ff0febb4e28835047efb3abfe44 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "wordCloud",
+            "name": "\u70ed\u70b9\u5206\u6790",
+            "shape": "circle",
+            "rotationRange": [
+                -90,
+                90
+            ],
+            "rotationStep": 45,
+            "girdSize": 20,
+            "sizeRange": [
+                15,
+                80
+            ],
+            "data": [
+                {
+                    "name": "\u7f8e\u56fd",
+                    "value": 583220,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(66,149,10)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u897f\u73ed\u7259",
+                    "value": 172541,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(88,56,45)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u610f\u5927\u5229",
+                    "value": 159516,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(65,39,94)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6cd5\u56fd",
+                    "value": 137887,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(33,63,102)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5fb7\u56fd",
+                    "value": 130434,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(53,152,52)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u82f1\u56fd",
+                    "value": 89569,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(155,142,112)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4f0a\u6717",
+                    "value": 74877,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(125,53,115)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u571f\u8033\u5176",
+                    "value": 61049,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(28,27,66)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6bd4\u5229\u65f6",
+                    "value": 31119,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(104,79,18)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8377\u5170",
+                    "value": 27580,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(61,33,125)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u745e\u58eb",
+                    "value": 25913,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(54,90,104)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u52a0\u62ff\u5927",
+                    "value": 25680,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(49,113,37)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5df4\u897f",
+                    "value": 23955,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(27,76,12)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4fc4\u7f57\u65af",
+                    "value": 21102,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(138,108,113)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8461\u8404\u7259",
+                    "value": 17448,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(82,2,22)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5965\u5730\u5229",
+                    "value": 14159,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(67,42,32)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4ee5\u8272\u5217",
+                    "value": 11868,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(126,115,51)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u745e\u5178",
+                    "value": 11445,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(20,63,115)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7231\u5c14\u5170",
+                    "value": 10647,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(64,10,114)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u97e9\u56fd",
+                    "value": 10564,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(82,155,56)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5370\u5ea6",
+                    "value": 10541,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(14,61,81)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u79d8\u9c81",
+                    "value": 9784,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(1,5,101)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u65e5\u672c\u672c\u571f",
+                    "value": 7645,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(9,137,76)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5384\u74dc\u591a\u5c14",
+                    "value": 7529,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(85,53,118)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u667a\u5229",
+                    "value": 7525,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(87,44,39)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6ce2\u5170",
+                    "value": 7049,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(1,0,128)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7f57\u9a6c\u5c3c\u4e9a",
+                    "value": 6879,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(3,48,81)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4e39\u9ea6",
+                    "value": 6691,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(59,103,147)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u632a\u5a01",
+                    "value": 6623,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(11,160,129)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6fb3\u5927\u5229\u4e9a",
+                    "value": 6494,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(113,57,145)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6377\u514b",
+                    "value": 6059,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(73,80,90)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5df4\u57fa\u65af\u5766",
+                    "value": 5837,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(66,159,96)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6c99\u7279\u963f\u62c9\u4f2f",
+                    "value": 5369,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(89,77,18)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u83f2\u5f8b\u5bbe",
+                    "value": 5223,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(1,33,122)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u58a8\u897f\u54e5",
+                    "value": 5014,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(104,21,41)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u9a6c\u6765\u897f\u4e9a",
+                    "value": 4987,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(151,82,93)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5370\u5ea6\u5c3c\u897f\u4e9a",
+                    "value": 4839,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(102,156,32)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u963f\u8054\u914b",
+                    "value": 4521,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(41,99,32)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u585e\u5c14\u7ef4\u4e9a",
+                    "value": 4054,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(22,70,51)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5df4\u62ff\u9a6c",
+                    "value": 3472,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(30,82,42)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5361\u5854\u5c14",
+                    "value": 3428,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(137,85,33)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4e4c\u514b\u5170",
+                    "value": 3372,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(100,57,146)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5362\u68ee\u5821",
+                    "value": 3292,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(34,99,64)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u767d\u4fc4\u7f57\u65af",
+                    "value": 3281,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(14,79,69)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u65b0\u52a0\u5761",
+                    "value": 3252,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(80,48,95)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u591a\u7c73\u5c3c\u52a0",
+                    "value": 3167,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(91,30,103)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u82ac\u5170",
+                    "value": 3161,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(36,22,76)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u54e5\u4f26\u6bd4\u4e9a",
+                    "value": 2852,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(132,141,158)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6cf0\u56fd",
+                    "value": 2613,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(18,67,116)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5357\u975e",
+                    "value": 2415,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(91,150,38)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u963f\u6839\u5ef7",
+                    "value": 2277,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(99,152,146)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u57c3\u53ca",
+                    "value": 2190,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(48,95,118)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5e0c\u814a",
+                    "value": 2145,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(88,111,30)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u963f\u5c14\u53ca\u5229\u4e9a",
+                    "value": 1983,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(126,89,1)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6469\u5c14\u591a\u74e6",
+                    "value": 1847,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(130,51,151)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6469\u6d1b\u54e5",
+                    "value": 1838,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(126,143,24)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u51b0\u5c9b",
+                    "value": 1711,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(4,69,42)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u514b\u7f57\u5730\u4e9a",
+                    "value": 1704,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(148,11,26)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5df4\u6797",
+                    "value": 1522,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(12,54,102)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5308\u7259\u5229",
+                    "value": 1512,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(20,34,99)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4f0a\u62c9\u514b",
+                    "value": 1378,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(26,95,122)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7231\u6c99\u5c3c\u4e9a",
+                    "value": 1373,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(2,28,46)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u65b0\u897f\u5170",
+                    "value": 1366,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(134,103,28)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u79d1\u5a01\u7279",
+                    "value": 1355,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(103,15,117)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u65af\u6d1b\u6587\u5c3c\u4e9a",
+                    "value": 1220,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(27,102,25)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u54c8\u8428\u514b\u65af\u5766",
+                    "value": 1202,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(64,131,3)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u963f\u585e\u62dc\u7586",
+                    "value": 1197,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(154,45,51)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4e4c\u5179\u522b\u514b\u65af\u5766",
+                    "value": 1113,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(92,155,20)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6ce2\u9ed1",
+                    "value": 1083,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(71,51,34)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7acb\u9676\u5b9b",
+                    "value": 1070,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(140,160,47)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4e9a\u7f8e\u5c3c\u4e9a",
+                    "value": 1067,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(45,78,10)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5b5f\u52a0\u62c9",
+                    "value": 1012,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(63,18,67)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5317\u9a6c\u5176\u987f",
+                    "value": 908,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(91,4,77)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5580\u9ea6\u9686",
+                    "value": 848,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(82,8,65)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u65af\u6d1b\u4f10\u514b",
+                    "value": 835,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(153,26,50)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u963f\u66fc",
+                    "value": 813,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(38,123,54)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u53e4\u5df4",
+                    "value": 726,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(48,136,111)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7a81\u5c3c\u65af",
+                    "value": 726,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(155,105,149)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u963f\u5bcc\u6c57",
+                    "value": 714,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(129,55,95)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4fdd\u52a0\u5229\u4e9a",
+                    "value": 713,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(18,100,77)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u94bb\u77f3\u53f7\u90ae\u8f6e",
+                    "value": 712,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(81,143,53)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u585e\u6d66\u8def\u65af",
+                    "value": 662,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(73,60,124)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u62c9\u8131\u7ef4\u4e9a",
+                    "value": 657,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(124,134,104)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5b89\u9053\u5c14",
+                    "value": 646,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(155,122,39)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u9ece\u5df4\u5ae9",
+                    "value": 641,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(77,37,94)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u79d1\u7279\u8fea\u74e6",
+                    "value": 626,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(18,62,85)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u54e5\u65af\u8fbe\u9ece\u52a0",
+                    "value": 612,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(24,45,13)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u52a0\u7eb3",
+                    "value": 566,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(57,74,89)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5c3c\u65e5\u5c14",
+                    "value": 548,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(117,113,22)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5e03\u57fa\u7eb3\u6cd5\u7d22",
+                    "value": 515,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(68,139,94)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4e4c\u62c9\u572d",
+                    "value": 483,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(73,64,112)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u963f\u5c14\u5df4\u5c3c\u4e9a",
+                    "value": 475,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(111,69,32)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5409\u5c14\u5409\u65af\u65af\u5766",
+                    "value": 430,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(143,104,116)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6d2a\u90fd\u62c9\u65af",
+                    "value": 407,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(3,110,71)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u9a6c\u8033\u4ed6",
+                    "value": 393,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(23,34,33)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7ea6\u65e6",
+                    "value": 391,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(156,154,67)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5723\u9a6c\u529b\u8bfa",
+                    "value": 371,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(77,89,103)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u51e0\u5185\u4e9a",
+                    "value": 363,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(143,60,81)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5409\u5e03\u63d0",
+                    "value": 363,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(138,55,154)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u73bb\u5229\u7ef4\u4e9a",
+                    "value": 354,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(154,79,12)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5c3c\u65e5\u5229\u4e9a",
+                    "value": 343,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(40,142,35)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6bdb\u91cc\u6c42\u65af",
+                    "value": 324,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(152,87,26)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6ce2\u591a\u9ece\u5404",
+                    "value": 316,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(23,119,116)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u585e\u5185\u52a0\u5c14",
+                    "value": 299,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(25,139,10)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u683c\u9c81\u5409\u4e9a",
+                    "value": 296,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(115,103,78)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u9ed1\u5c71",
+                    "value": 278,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(78,156,66)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8d8a\u5357",
+                    "value": 266,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(41,97,55)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u521a\u679c\uff08\u91d1\uff09",
+                    "value": 241,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(80,29,120)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u65af\u91cc\u5170\u5361",
+                    "value": 219,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(134,23,138)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u80af\u5c3c\u4e9a",
+                    "value": 208,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(159,132,123)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u59d4\u5185\u745e\u62c9",
+                    "value": 189,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(132,46,122)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5371\u5730\u9a6c\u62c9",
+                    "value": 167,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(107,63,13)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5df4\u52d2\u65af\u5766",
+                    "value": 161,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(65,86,63)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5df4\u62c9\u572d",
+                    "value": 159,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(113,121,125)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8428\u5c14\u74e6\u591a",
+                    "value": 149,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(108,66,61)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6587\u83b1",
+                    "value": 136,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(28,61,121)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5362\u65fa\u8fbe",
+                    "value": 127,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(58,51,104)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u9a6c\u91cc",
+                    "value": 123,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(122,118,98)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u67ec\u57d4\u5be8",
+                    "value": 122,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(71,10,109)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7279\u7acb\u5c3c\u8fbe\u548c\u591a\u5df4\u54e5",
+                    "value": 113,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(23,127,52)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u9a6c\u8fbe\u52a0\u65af\u52a0",
+                    "value": 108,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(24,141,54)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6469\u7eb3\u54e5",
+                    "value": 93,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(70,63,147)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u57c3\u585e\u4fc4\u6bd4\u4e9a",
+                    "value": 82,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(154,124,74)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5217\u652f\u6566\u58eb\u767b\u516c\u56fd",
+                    "value": 79,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(78,15,131)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u591a\u54e5",
+                    "value": 77,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(7,22,160)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7259\u4e70\u52a0",
+                    "value": 73,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(55,67,68)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5df4\u5df4\u591a\u65af",
+                    "value": 72,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(151,44,46)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7f05\u7538",
+                    "value": 62,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(10,54,64)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u521a\u679c\uff08\u5e03\uff09",
+                    "value": 60,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(13,47,10)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7d22\u9a6c\u91cc",
+                    "value": 60,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(30,81,29)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5229\u6bd4\u91cc\u4e9a",
+                    "value": 59,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(58,159,97)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u52a0\u84ec",
+                    "value": 57,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(11,86,34)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4e4c\u5e72\u8fbe",
+                    "value": 54,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(90,26,41)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5df4\u54c8\u9a6c",
+                    "value": 49,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(106,58,87)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5766\u6851\u5c3c\u4e9a",
+                    "value": 49,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(18,133,88)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u572d\u4e9a\u90a3",
+                    "value": 47,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(103,17,140)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8d5e\u6bd4\u4e9a",
+                    "value": 45,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(128,137,15)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6d77\u5730",
+                    "value": 40,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(38,22,56)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u51e0\u5185\u4e9a\u6bd4\u7ecd",
+                    "value": 38,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(34,96,93)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u9a6c\u63d0\u5c3c\u514b\u5c9b",
+                    "value": 37,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(29,35,133)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8d1d\u5b81",
+                    "value": 35,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(86,6,126)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5384\u7acb\u7279\u91cc\u4e9a",
+                    "value": 34,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(123,149,97)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8499\u53e4",
+                    "value": 30,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(30,112,25)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u82cf\u4e39",
+                    "value": 29,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(143,28,3)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5229\u6bd4\u4e9a",
+                    "value": 26,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(84,3,135)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u53d9\u5229\u4e9a",
+                    "value": 25,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(126,54,76)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5b89\u63d0\u74dc\u548c\u5df4\u5e03\u8fbe",
+                    "value": 23,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(69,101,132)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4e4d\u5f97",
+                    "value": 23,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(160,47,144)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8d64\u9053\u51e0\u5185\u4e9a",
+                    "value": 21,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(84,127,74)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u83ab\u6851\u6bd4\u514b",
+                    "value": 21,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(160,17,69)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u9a6c\u5c14\u4ee3\u592b",
+                    "value": 20,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(52,11,102)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8001\u631d",
+                    "value": 19,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(46,31,108)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5b89\u54e5\u62c9",
+                    "value": 19,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(104,19,160)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4f2f\u5229\u5179",
+                    "value": 18,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(55,125,110)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6d25\u5df4\u5e03\u97e6",
+                    "value": 17,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(32,138,109)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u591a\u7c73\u5c3c\u514b",
+                    "value": 16,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(17,116,157)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7eb3\u7c73\u6bd4\u4e9a",
+                    "value": 16,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(157,75,23)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5c3c\u6cca\u5c14",
+                    "value": 16,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(27,48,96)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u9a6c\u62c9\u7ef4",
+                    "value": 16,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(42,123,109)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6590\u6d4e",
+                    "value": 16,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(57,85,68)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u65af\u5a01\u58eb\u5170",
+                    "value": 15,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(66,90,68)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5723\u5362\u897f\u4e9a",
+                    "value": 15,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(155,32,131)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u683c\u6797\u7eb3\u8fbe",
+                    "value": 14,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(100,64,1)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u535a\u8328\u74e6\u7eb3",
+                    "value": 13,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(36,98,132)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5723\u57fa\u8328\u548c\u5c3c\u7ef4\u65af",
+                    "value": 12,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(160,83,124)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5723\u6587\u68ee\u7279\u548c\u683c\u6797\u7eb3\u4e01\u65af",
+                    "value": 12,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(13,0,158)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u585e\u62c9\u5229\u6602",
+                    "value": 11,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(31,82,30)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4e2d\u975e\u5171\u548c\u56fd",
+                    "value": 11,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(156,107,34)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u585e\u820c\u5c14",
+                    "value": 11,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(67,48,144)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u82cf\u91cc\u5357",
+                    "value": 10,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(15,43,71)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4f5b\u5f97\u89d2",
+                    "value": 10,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(134,148,131)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5c3c\u52a0\u62c9\u74dc",
+                    "value": 9,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(1,18,126)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5188\u6bd4\u4e9a",
+                    "value": 9,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(15,81,145)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u68b5\u8482\u5188",
+                    "value": 8,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(81,30,56)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6bdb\u91cc\u5854\u5c3c\u4e9a",
+                    "value": 7,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(127,128,86)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4e1c\u5e1d\u6c76",
+                    "value": 6,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(159,45,84)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5e03\u9686\u8fea",
+                    "value": 5,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(138,20,31)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4e0d\u4e39",
+                    "value": 5,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(158,107,29)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5df4\u5e03\u4e9a\u65b0\u51e0\u5185\u4e9a",
+                    "value": 2,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(143,158,57)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4e5f\u95e8",
+                    "value": 1,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(38,121,149)"
+                        }
+                    }
+                }
+            ],
+            "drawOutOfBound": false,
+            "textStyle": {
+                "emphasis": {}
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "title": [
+        {
+            "text": "\u75ab\u60c5\u91cd\u707e\u56fd\u5bb6\u5206\u6790",
+            "padding": 5,
+            "itemGap": 10,
+            "textStyle": {
+                "fontSize": 23
+            }
+        }
+    ]
+};
+        chart_9e1f1ff0febb4e28835047efb3abfe44.setOption(option_9e1f1ff0febb4e28835047efb3abfe44);
+    </script>
+    </div>
+
+    <script>
+    </script>
+    <script>
+        (function() {
+            containers = document.getElementsByClassName("chart-container");
+            if(containers.length > 0) {
+                containers[0].style.display = "block";
+            }
+        })()
+
+        function showChart(evt, chartID) {
+            let containers = document.getElementsByClassName("chart-container");
+            for (let i = 0; i < containers.length; i++) {
+                containers[i].style.display = "none";
+            }
+
+            let tablinks = document.getElementsByClassName("tablinks");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = "tablinks";
+            }
+
+            document.getElementById(chartID).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
