@@ -1,5 +1,5 @@
 import pandas as pd
-from pyecharts.charts import Bar 
+from pyecharts.charts import Bar,Pie,Timeline
 from pyecharts import options as opts
 def count_rate():
 	china_df = pd.read_csv("data\city_total_list.csv",index_col=0)
@@ -62,11 +62,32 @@ def overseas_healRate():
 		)
 		.render("visual_html\海外治愈比率top10.html")
 	)
+def plot_healDeadPie():
+	data = pd.read_csv('data\chinaDayData.csv')
+	df = pd.DataFrame(data)
+	#数据
+	date=df.iloc[:, 1].tolist()
+	tl = Timeline()
+
+	for i in range(len(data)):
+		pie1 = (
+			Pie()
+			.add(
+				"商家A",
+				[list(z) for z in zip(["死亡","治愈"],df.iloc[i,3:].tolist())],
+				radius=["30%", "55%"],
+			)
+			.set_global_opts(title_opts=opts.TitleOpts("中国{}日死亡率和治愈率比重".format(date[i])))
+		)
+		tl.add(pie1, "{}".format(date[i]))
+	tl.render("visual_html\中国每日死亡人数与治愈人数比重饼图.html")
+	return pie1
 
 def run():
 	count_rate()
 	overseas_deadRate()
 	overseas_healRate()
+	plot_healDeadPie()
 	
 	
   
