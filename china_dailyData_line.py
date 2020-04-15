@@ -8,10 +8,10 @@ def plot_chinaDayData()-> Line:
 	df = pd.DataFrame(data)
 	#数据
 	date=df.iloc[:, 1].tolist()
-	nowconfirm=df.iloc[:, 1].tolist()
+	nowconfirm=df.iloc[:, 3].tolist()
 	confirm=df.iloc[:, 2].tolist()
-	dead=df.iloc[:,3].tolist()
-	heal=df.iloc[:, 4].tolist()
+	dead=df.iloc[:,4].tolist()
+	heal=df.iloc[:, 5].tolist()
 	date=[str(i) for i in date]
 
 	line=(

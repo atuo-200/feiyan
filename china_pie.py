@@ -25,11 +25,11 @@ def plot_chinaPie() -> Pie:
             center=["60%", "70%"]
             )
         .set_global_opts(
-            title_opts=opts.TitleOpts(title="国内城市死亡/治愈人数饼图"),
+            title_opts=opts.TitleOpts(title="国内省份死亡/治愈人数饼图"),
             legend_opts=opts.LegendOpts(type_="scroll", pos_top="20%", pos_left="90%", orient="vertical"),
         )
         .set_series_opts(label_opts=opts.LabelOpts(formatter="{b}: {c}"))
 
     )
-    c.render(path = "visual_html\国内城市死亡及治愈人数饼图.html")
+    c.render(path = "visual_html\国内省份死亡及治愈人数饼图.html")
     return c

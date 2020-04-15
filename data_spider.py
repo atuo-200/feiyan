@@ -52,9 +52,9 @@ def spider_chinaDayData():
 	china_everday_data = spider_data("https://view.inews.qq.com/g2/getOnsInfo?name=disease_other")
 	chinaDayList = json.loads(china_everday_data)["chinaDayList"]
 
-	chinaDayData = [(i["date"],i["confirm"],i["dead"],i["heal"]) for i in chinaDayList]
+	chinaDayData = [(i["date"],i["confirm"],i["nowConfirm"],i["dead"],i["heal"]) for i in chinaDayList]
 	chinaDayData = pd.DataFrame(chinaDayData)
-	chinaDayData.columns = ['日期', '确诊','死亡','痊愈']
+	chinaDayData.columns = ['日期', '累计确诊','现有确诊','死亡','痊愈']
 	chinaDayData.to_csv('data\chinaDayData.csv', encoding='utf-8')
 def spider_rate():
 	#爬取海外疫情治愈率和死亡率前10的国家数据并保存成csv文件

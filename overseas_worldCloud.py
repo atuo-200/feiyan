@@ -9,7 +9,7 @@ def plot_countryWordCloud() -> WordCloud:
     data = [list(i) for i in zip(data_country, data_confirm)]
     c = (
         WordCloud()
-        .add(series_name="热点分析", data_pair=data, word_size_range=[15, 80])
+        .add(series_name="疫情热点", data_pair=data, word_size_range=[15, 80])
         .set_global_opts(
             title_opts=opts.TitleOpts(
                 title="疫情重灾国家分析", title_textstyle_opts=opts.TextStyleOpts(font_size=23)
