@@ -27,7 +27,7 @@
 
 **项目程序实现逻辑**
 
-![项目程序流程图](https://github.com/atuo-200/feiyan/blob/master/image/canvas10.png)
+![image](https://github.com/atuo-200/feiyan/blob/master/image/canvas10.png)
 
 #### 1、了解疫情数据
 
@@ -35,11 +35,11 @@
 
 ​		**国内省份及其城市的疫情数据**
 
-![image-20200417002121584](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200417002121584.png)
+![image](https://github.com/atuo-200/feiyan/blob/master/image/image-20200417002121584.png)
 
 ​		**海外国家的疫情数据**
 
-![image-20200417001910548](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200417001910548.png)
+![image](https://github.com/atuo-200/feiyan/blob/master/image/image-20200417001910548.png)
 
 #### 2、疫情数据爬虫
 
@@ -53,11 +53,11 @@
 
 我们进入网页https://news.qq.com/zt2020/page/feiyan.htm，通过查看网页源代码发现这个网页是动态网页。我们选择借助火狐浏览器的Web开发者工具找到相应疫情数据存放的位置。打开【网络（Network）】面板，重新刷新网页，监听网络信息，可以看到从网络请求下载资源的实时信息。
 
-![image-20200417132103528](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200417132103528.png)
+![image](https://github.com/atuo-200/feiyan/blob/master/image/image-20200417132103528.png)
 
 在这里我们需要关注的重点是js、json类型的数据，逐个点击查看，会在右侧响应标签下显示该资源的内容。
 
-![image-20200417132412989](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200417132412989.png)
+![image](https://github.com/atuo-200/feiyan/blob/master/image/image-20200417132412989.png)
 
 想要更加仔细的查看该资源的信息，可以右键单击该资源，选择新建标签页打开。
 
@@ -162,7 +162,7 @@ def run():
 
 代码运行后会在项目目录下的data目录中生成几个数据文件，这就是我们数据爬虫和数据预处理的最终结果，我们可以拿这些数据进行疫情数据分析和疫情数据可视化。
 
-![image-20200417153228898](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200417153228898.png)
+![image](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200417153228898.png)
 
 #### 4、疫情数据分析
 
@@ -270,7 +270,7 @@ def run():
 
 count_rate()函数中，我们对city_total_list.csv中的数据进行治愈率和死亡率的计算，先根据治愈率进行降序排序，得到以下结果。
 
-![image-20200417160146594](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200417160146594.png)
+![image-20200417160146594](https://github.com/atuo-200/feiyan/blob/master/image/image-20200417160146594.png)
 
 数据显示宁夏、西藏、青海的治愈率最高为100%，既得益于抗疫措施的部署恰当，也得益于地处偏远，输入病例少，疫情可控。
 
@@ -282,7 +282,7 @@ count_rate()函数中，我们对city_total_list.csv中的数据进行治愈率�
 
 再根据死亡率进行降序排序
 
-![image-20200417160924315](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200417160924315.png)
+![image](https://github.com/atuo-200/feiyan/blob/master/image/image-20200417160924315.png)
 
 数据显示湖北的死亡率达到约6.6%，是死亡率第二名的省份的两倍，因为其地处疫情爆发中心点，也因为早期抗疫措施不全面，疫情扩散快，医护物资和医护人员短缺，造成一些令人惋惜的悲剧。
 
@@ -292,7 +292,7 @@ count_rate()函数中，我们对city_total_list.csv中的数据进行治愈率�
 
 先来看看海外国家死亡率的top10，overseas_deadRate() 函数中我们对海外死亡率前十的国家数据提取出来做可视化呈现，得到如下图表。
 
-![image-20200417171223382](https://github.com/atuo-200/feiyan/blob/master/image/canvas5.png)
+![image](https://github.com/atuo-200/feiyan/blob/master/image/canvas5.png)
 
 从上图我们可以得出死亡率最高的是阿尔及利亚，其地处非洲，科技水平和医疗水平落后，人民生活缺乏卫生观念，造成疫情扩散，死亡率居高。
 
@@ -304,7 +304,7 @@ count_rate()函数中，我们对city_total_list.csv中的数据进行治愈率�
 
 再来看看海外国家治愈率的top10，overseas_healRate()函数中，我们对海外国家治愈率前十的国家数据提取出来做可视化呈现，得到如下图表。
 
-![image-20200417175847996](https://github.com/atuo-200/feiyan/blob/master/image/canvas6.png)
+![image](https://github.com/atuo-200/feiyan/blob/master/image/canvas6.png)
 
 由图可以看出海外国家治愈率最高的为韩国，比治愈率第二名的国家高出大约10%的百分比，我们小组总结了以下原因：
 
@@ -318,7 +318,7 @@ plot_healDeadPie()函数中我们绘制中国每日死亡及治愈人数比重�
 
 可以戳链接 https://atuo-200.github.io/china_deadHeal_pie.html 点击图表下方的播放按钮，我们可以看到中国治愈率占死亡率的比重是逐渐加大，这说明我国的疫情发展是向好发展的。这得益于中国全党和全人民对抗击疫情采取的一系列举措，使中国成为全世界疫情控制得最好的国家。
 
-![image-20200417181738459](https://github.com/atuo-200/feiyan/blob/master/image/canvas9.png)
+![image](https://github.com/atuo-200/feiyan/blob/master/image/canvas9.png)
 
 #### 5、疫情数据可视化
 
@@ -443,7 +443,7 @@ def plot_chinaDayData()-> Line:
 
 **图表展示**
 
-![image-20200417213513838](https://github.com/atuo-200/feiyan/blob/master/image/canvas7.png)
+![image](https://github.com/atuo-200/feiyan/blob/master/image/canvas7.png)
 
 ##### 5.2 中国省份疫情数据地图
 
@@ -497,7 +497,7 @@ def plot_china_provinces()-> Map:
 
 **图表展示**
 
-![canvas](https://github.com/atuo-200/feiyan/blob/master/image/canvas8.png)
+![image](https://github.com/atuo-200/feiyan/blob/master/image/canvas8.png)
 
 ##### 5.3 海外疫情数据地图
 
@@ -735,7 +735,7 @@ def plot_overseasMap()-> Map:
 
 **图表展示**
 
-![image-20200417213703647](https://github.com/atuo-200/feiyan/blob/master/image/canvas1.png)
+![image](https://github.com/atuo-200/feiyan/blob/master/image/canvas1.png)
 
 ##### 5.4 海外疫情数据条形图
 
@@ -810,7 +810,7 @@ def plot_overseasBar()-> Bar:
 
 **图表展示**
 
-![image-20200417204346403](https://github.com/atuo-200/feiyan/blob/master/image/canvas2.png)
+![image](https://github.com/atuo-200/feiyan/blob/master/image/canvas2.png)
 
 ##### 5.5 国内省份死亡/治愈人数饼图
 
@@ -856,7 +856,7 @@ def plot_chinaPie() -> Pie:
 
 **图表展示**
 
-![image-20200417204602173](https://github.com/atuo-200/feiyan/blob/master/image/canvas3.png)
+![image](https://github.com/atuo-200/feiyan/blob/master/image/canvas3.png)
 
 ##### 5.6 海外疫情国家词云图
 
@@ -888,7 +888,7 @@ def plot_countryWordCloud() -> WordCloud:
 
 **图表展示**
 
-![image-20200417204813684](https://github.com/atuo-200/feiyan/blob/master/image/canvas4.png)
+![image](https://github.com/atuo-200/feiyan/blob/master/image/canvas4.png)
 
 根据词云可以看出，其中“美国”、“意大利”、“西班牙”等词最为突出，因此我们初步判断这几个国家是海外的疫情重灾国家。
 
@@ -935,7 +935,7 @@ tab.render("show_view.html")
 
 可戳链接 [https://atuo-200.github.io/feiyan/show_view.html](https://atuo-200.github.io/feiyan/show_view.html) 查看最终集成的可视化图表。
 
-![image-20200417211748200](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200417211748200.png)
+![image](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200417211748200.png)
 
 #### 总结
 
