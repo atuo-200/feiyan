@@ -27,7 +27,7 @@
 
 **项目程序实现逻辑**
 
-![image](https://github.com/atuo-200/feiyan/blob/master/image/canvas10.png)
+![image](https://github.com/atuo-200/feiyan/blob/master/image/canvas10.PNG)
 
 #### 1、了解疫情数据
 
@@ -162,7 +162,7 @@ def run():
 
 代码运行后会在项目目录下的data目录中生成几个数据文件，这就是我们数据爬虫和数据预处理的最终结果，我们可以拿这些数据进行疫情数据分析和疫情数据可视化。
 
-![image](https://github.com/atuo-200/feiyan/blob/master/image/image1.png)
+![image](https://github.com/atuo-200/feiyan/blob/master/image/image1.PNG)
 
 #### 4、疫情数据分析
 
@@ -935,7 +935,7 @@ tab.render("show_view.html")
 
 可戳链接 [https://atuo-200.github.io/feiyan/show_view.html](https://atuo-200.github.io/feiyan/show_view.html) 查看最终集成的可视化图表。
 
-![image](https://github.com/atuo-200/feiyan/blob/master/image/image2.png)
+![image](https://github.com/atuo-200/feiyan/blob/master/image/image2.PNG)
 
 #### 总结
 
