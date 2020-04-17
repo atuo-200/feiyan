@@ -27,11 +27,7 @@
 
 **项目程序实现逻辑**
 
-```mermaid
-graph LR
-A(数据爬虫) -->B(数据预处理)
-B --> D(数据分析) -->E(数据可视化) -->F(可视化图表部署到网页)
-```
+![项目程序流程图](https://github.com/atuo-200/feiyan/blob/master/image/canvas10.png)
 
 #### 1、了解疫情数据
 
@@ -296,7 +292,7 @@ count_rate()函数中，我们对city_total_list.csv中的数据进行治愈率�
 
 先来看看海外国家死亡率的top10，overseas_deadRate() 函数中我们对海外死亡率前十的国家数据提取出来做可视化呈现，得到如下图表。
 
-![image-20200417171223382](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200417171223382.png)
+![image-20200417171223382](https://github.com/atuo-200/feiyan/blob/master/image/canvas5.png)
 
 从上图我们可以得出死亡率最高的是阿尔及利亚，其地处非洲，科技水平和医疗水平落后，人民生活缺乏卫生观念，造成疫情扩散，死亡率居高。
 
@@ -308,7 +304,7 @@ count_rate()函数中，我们对city_total_list.csv中的数据进行治愈率�
 
 再来看看海外国家治愈率的top10，overseas_healRate()函数中，我们对海外国家治愈率前十的国家数据提取出来做可视化呈现，得到如下图表。
 
-![image-20200417175847996](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200417175847996.png)
+![image-20200417175847996](https://github.com/atuo-200/feiyan/blob/master/image/canvas6.png)
 
 由图可以看出海外国家治愈率最高的为韩国，比治愈率第二名的国家高出大约10%的百分比，我们小组总结了以下原因：
 
@@ -322,7 +318,7 @@ plot_healDeadPie()函数中我们绘制中国每日死亡及治愈人数比重�
 
 可以戳链接 https://atuo-200.github.io/china_deadHeal_pie.html 点击图表下方的播放按钮，我们可以看到中国治愈率占死亡率的比重是逐渐加大，这说明我国的疫情发展是向好发展的。这得益于中国全党和全人民对抗击疫情采取的一系列举措，使中国成为全世界疫情控制得最好的国家。
 
-![image-20200417181738459](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200417181738459.png)
+![image-20200417181738459](https://github.com/atuo-200/feiyan/blob/master/image/canvas9.png)
 
 #### 5、疫情数据可视化
 
@@ -447,7 +443,7 @@ def plot_chinaDayData()-> Line:
 
 **图表展示**
 
-![image-20200417213513838](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200417213513838.png)
+![image-20200417213513838](https://github.com/atuo-200/feiyan/blob/master/image/canvas7.png)
 
 ##### 5.2 中国省份疫情数据地图
 
@@ -501,7 +497,7 @@ def plot_china_provinces()-> Map:
 
 **图表展示**
 
-![canvas](C:\Users\lenovo\Desktop\canvas.png)
+![canvas](https://github.com/atuo-200/feiyan/blob/master/image/canvas8.png)
 
 ##### 5.3 海外疫情数据地图
 
@@ -739,7 +735,7 @@ def plot_overseasMap()-> Map:
 
 **图表展示**
 
-![image-20200417213703647](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200417213703647.png)
+![image-20200417213703647](https://github.com/atuo-200/feiyan/blob/master/image/canvas1.png)
 
 ##### 5.4 海外疫情数据条形图
 
@@ -814,7 +810,7 @@ def plot_overseasBar()-> Bar:
 
 **图表展示**
 
-![image-20200417204346403](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200417204346403.png)
+![image-20200417204346403](https://github.com/atuo-200/feiyan/blob/master/image/canvas2.png)
 
 ##### 5.5 国内省份死亡/治愈人数饼图
 
@@ -860,7 +856,7 @@ def plot_chinaPie() -> Pie:
 
 **图表展示**
 
-![image-20200417204602173](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200417204602173.png)
+![image-20200417204602173](https://github.com/atuo-200/feiyan/blob/master/image/canvas3.png)
 
 ##### 5.6 海外疫情国家词云图
 
@@ -892,7 +888,7 @@ def plot_countryWordCloud() -> WordCloud:
 
 **图表展示**
 
-![image-20200417204813684](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200417204813684.png)
+![image-20200417204813684](https://github.com/atuo-200/feiyan/blob/master/image/canvas4.png)
 
 根据词云可以看出，其中“美国”、“意大利”、“西班牙”等词最为突出，因此我们初步判断这几个国家是海外的疫情重灾国家。
 
