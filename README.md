@@ -162,7 +162,7 @@ def run():
 
 代码运行后会在项目目录下的data目录中生成几个数据文件，这就是我们数据爬虫和数据预处理的最终结果，我们可以拿这些数据进行疫情数据分析和疫情数据可视化。
 
-![image](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200417153228898.png)
+![image](https://github.com/atuo-200/feiyan/blob/master/image/image1.png)
 
 #### 4、疫情数据分析
 
@@ -935,7 +935,7 @@ tab.render("show_view.html")
 
 可戳链接 [https://atuo-200.github.io/feiyan/show_view.html](https://atuo-200.github.io/feiyan/show_view.html) 查看最终集成的可视化图表。
 
-![image](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200417211748200.png)
+![image](https://github.com/atuo-200/feiyan/blob/master/image/image2.png)
 
 #### 总结
 
